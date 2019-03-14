@@ -31,6 +31,8 @@ Base.prepare(db.engine, reflect=True)
 Aac = Base.classes.aac_outcomes
 Satisfaction = Base.classes.city_satisfaction
 
+# engine = create_engine("sqlite:///db/austinproject2.sqlite")
+# session = Session(engine)
 
 @app.route("/")
 def index():
@@ -38,38 +40,19 @@ def index():
     return render_template("index.html")
 
 @app.route("/satisfactiondata")
-def data():
-    print("howdy!")
-    sel = func.count(Satisfaction.safety_day)
-    results = db.Session.query(*sel).all()
-    df = pd.DataFrame(results, columns=['safety_day'])
-    return jsonify(df.to_dict(orient="records"))
 
-# @app.route("/api/pals")
-# def pals():
-#     results = db.session.query(Pet.type, func.count(Pet.type)).group_by(Pet.type).all()
+def satisfaction():
 
-#     pet_type = [result[0] for result in results]
-#     age = [result[1] for result in results]
+    results = db.session.query(Satisfaction).all()
 
-#     trace = {
-#         "x": pet_type,
-#         "y": age,
-#         "type": "bar"
-#     }
-
-#     return jsonify(trace)
-
-# def satisfaction(safety):
-
-#     results = db.session.query(satisfaction.safety_day).all()
-
-#     allsatisfaction = []
-#     for result in results:
-#         allsatisfaction.append({
-#             "safetyday": result[0],
-#         })
-#     return jsonify(allsatisfaction)
+    allsatisfaction = []
+    # print(type(results))
+    for result in results:
+        satisfaction_result = {}
+        satisfaction_result['safety_day'] = result.safety_day
+        allsatisfaction.append(satisfaction_result)
+        # print(result.safety_day)
+    return jsonify(allsatisfaction)
 
 
 # @app.route("/satisfaction")
