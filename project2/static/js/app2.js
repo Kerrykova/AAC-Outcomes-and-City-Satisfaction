@@ -37,26 +37,52 @@ function buildCharts(sample) {
     var otu = sampleData.otu_ids;
     var labels = sampleData.otu_labels;
 
-    // PIE CHART
+    //PIE CHART
 
-    var topSamples = sample.slice(0, 10);
-    var topOtu = otu.slice(0,10);
-    var topLabels = labels.slice(0,10);
+    //var outcomeAge = outcomeAge.slice(0, 10);
+    //var type = type.slice(0,10);
+    //var breed = breed.slice(0,10);
 
-    var pieData = [{
-      values: topSamples,
-      labels: topOtu,
-      type: 'pie',
-      hovertext: topLabels,
-      hoverinfo: 'label+text+value+percent',
-    }];
+    //var pieData = [{
+      //values: {x_value, y_value},
+      //labels: {outcomeAge, type, breed},
+      //type: 'pie',
+      //hovertext: topLabels,
+      //hoverinfo: 'label+text+value+percent',
+    //}];
     
-    var pieLayout = {
-      height: 500,
-      width: 500
-    };
+    //var pieLayout = {
+      //height: 500,
+      //width: 500
+    //};
     
-    Plotly.newPlot('pie', pieData, pieLayout);
+    //Plotly.newPlot('pie', pieData, pieLayout);
+
+  // set the data
+  // var data = [
+  //{x: "", value:},
+  //{x: "", value: },
+  //{x: "", value: },
+  //{x: "", value: },
+  //{x: "", value: },
+  //{x: "", value: },
+  //{x: "", value:}
+  //];
+
+  // create the chart
+  //var chart = animalType.pie();
+
+  // set the chart title
+  //AustinAnimals.title;
+
+  // add the data
+  //chart.data(data);
+
+  // display the chart in the container
+  //chart.container('container');
+  //chart.draw();
+
+
 
     // BUBBLE CHART
     var trace1 = {
