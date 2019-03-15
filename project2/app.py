@@ -13,7 +13,7 @@ from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
+app.config['SQLALCHEMY_ECHO'] = True
 
 #################################################
 # Database Setup
@@ -28,7 +28,11 @@ Base = automap_base()
 Base.prepare(db.engine, reflect=True)
 
 # Save references to each table
+print(Base.classes)
 Aac = Base.classes.aac_outcomes
+# class Aac(Base):
+#     __tablename__ = 'aac_outcomes'
+
 Satisfaction = Base.classes.city_satisfaction
 
 # engine = create_engine("sqlite:///db/austinproject2.sqlite")
@@ -42,7 +46,7 @@ def index():
 @app.route("/satisfactiondata")
 
 def satisfaction():
-
+    print(db.metadata)
     results = db.session.query(Satisfaction).all()
 
     allsatisfaction = []
@@ -50,27 +54,41 @@ def satisfaction():
     for result in results:
         satisfaction_result = {}
         satisfaction_result['safety_day'] = result.safety_day
+        satisfaction_result['safety_night'] = result.safety_night
+        satisfaction_result['safety_parks'] = result.safety_parks
+        satisfaction_result['year'] = result.year
+
         allsatisfaction.append(satisfaction_result)
         # print(result.safety_day)
     return jsonify(allsatisfaction)
 
+@app.route("/aacdata")
 
-# @app.route("/satisfaction")
-# def samples(sample):
-#     """Return `otu_ids`, `otu_labels`,and `sample_values`."""
-#     stmt = db.session.query(satisfaction).statement
-#     df = pd.read_sql_query(stmt, db.session.bind)
+def aac():
+    # print(Aac)
+    # randomName = db.session.query(Aac)
+    results = db.session.query(Aac).all()
+    # results = db.engine.execute("""SELECT aac_outcomes.id AS id, aac_outcomes.year AS year, aac_outcomes.animal_type AS animal_type, aac_outcomes.outcome_type AS outcome_type, aac_outcomes.age_upon_outcome AS age_upon_outcome, aac_outcomes.breed AS breed FROM aac_outcomes""")
+    # for x in randomName:
+    #     print(x)
+    # print(randomName)
+    allaac = []
+    # print(type(results))
+    # print(results)
+    for result in results:
+        # print(result.keys())
+        aac_results = {}
+        aac_results['year'] = result.year
+        aac_results['animal_type'] = result.animal_type
+        aac_results['outcome_type'] = result.outcome_type
+        aac_results['breed'] = result.breed
 
-#     # Filter the data based on the sample number and
-#     # only keep rows with values above 1
-#     sample_data = df.loc[df[sample] === "Agree", ["otu_id", "otu_label", sample]]
-#     # Format the data to send as json
-#     data = {
-#         "otu_ids": sample_data.otu_id.values.tolist(),
-#         "sample_values": sample_data[sample].values.tolist(),
-#         "otu_labels": sample_data.otu_label.tolist(),
-#     }
-#     return jsonify(data)
+        allaac.append(aac_results)
+        # print(result)
+
+    return jsonify(allaac)
+    # return {}
+
 
 
 if __name__ == "__main__":
