@@ -19,37 +19,55 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>SELECT Sample:</h5>
+        <div class="well col-md-4">
+          <h5>SELECT Measure:</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
+          <div id="pie"></div>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Sample MetaData</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
+        <div class="well col-md-8">
+          <h4>Animal City Map (Zipcode Outlines)</h4>
+          <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+          <div id="graph"></div>
         </div>
       </div>
+      <div class="row"></div>
+        <hr>
+      <div class="row">
+        <div class="panel panel-primary col-md-6">
+          <div class="panel-heading">
+            <h3 class="panel-title">Animal Outcomes by Year</h3>
+          </div>
+          <div id="sample-animaldata" class="panel-body"></div>
+        </div>
+        <div class="panel panel-primary col-md-6">
+          <div class="panel-heading">
+            <h3 class="panel-title">Safety by Year</h3>
+          </div>
+          <div id="sample-safetydata" class="panel-body"></div>
+        </div></div>
+    </div>
+    <!-- <div class="row"></div>
       <div class="col-md-5">
         <div id="pie"></div>
-      </div>
-      <div class="col-md-5">
+      </div> -->
+      <!-- <div class="col-md-5">
         <div id="gauge"></div>
-      </div>
+      </div> -->
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-12">
       <div id="bubble"></div>
     </div>
-  </div>
+  </div> -->
 
   <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="{{ url_for('static', filename='js/app2.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <!-- <script src="{{ url_for('static', filename='../static/js/app2.js') }}"></script>
+  <script src="{{ url_for('static', filename='../static/js/app.js') }}"></script> -->
+  <script type="text/javascript" src="../static/js/app.js"></script>
+  <script type="text/javascript" src="../static/js/app2.js"></script>
 
 </body>
 
