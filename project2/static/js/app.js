@@ -1,7 +1,6 @@
 
 var satisfactiondata;
 
-
 // d3.json(`/satisfactiondata`).then(function(response){
 //   satisfactionsample = response;
 //   // Use d3 to select the panel with id of `#sample-metadata`
@@ -17,20 +16,49 @@ var satisfactiondata;
 //   });
 // }
 
-
 function buildCharts(satisfaction) {
 // @TODO: Use `d3.json` to fetch the sample data for the plots
 d3.json(`/satisfactiondata`).then(function(response){
   // @TODO: Build a Bubble Chart using the sample data
   satisfactionData = response;
+  // console.log(satisfactionData);
+  var sat2015list = [];
+  var sat2016list = [];
+  var sat2017list = [];
 
-  var safety_day_mapped = satisfactionData.map(satisfactionData => satisfactionData.safety_day);
-  var safety_night_mapped = satisfactionData.map(satisfactionData => satisfactionData.safety_night);
-  var safety_parks_mapped = satisfactionData.map(satisfactionData => satisfactionData.safety_parks);
+  satisfactionData.forEach(element => {
+    if (element.year === 2015){
+      sat2015list.push(element)
+    }
+    if (element.year === 2016) {
+      sat2016list.push(element)
+    }
+    if (element.year === 2017) {
+      sat2017list.push(element)
+    }
 
-  console.log(safety_day_mapped);
-  console.log(safety_night_mapped);
-  console.log(safety_parks_mapped);
+  });
+
+  console.log(sat2015list)
+  console.log(sat2016list)
+  console.log(sat2017list)
+
+  var safety_day_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_day);
+  var safety_day_mapped2016 = sat2016list.map(sat2016list => sat2016list.safety_day);
+  var safety_day_mapped2017 = sat2017list.map(sat2017list => sat2017list.safety_day);
+
+  var safety_night_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_night);
+  var safety_night_mapped2016 = sat2016list.map(sat2016list => sat2016list.safety_night);
+  var safety_night_mapped2017 = sat2017list.map(sat2017list => sat2017list.safety_night);
+
+  
+  var safety_parks_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_parks);
+  var safety_parks_mapped2016 = sat2016list.map(sat2016list => sat2016list.safety_parks);
+  var safety_parks_mapped2017 = sat2017list.map(sat2017list => sat2017list.safety_parks);
+
+  // console.log(safety_day_mapped2015);
+  // console.log(safety_night_mapped);
+  // console.log(safety_parks_mapped);
 
   function wordCount(data) {
   //   // An object to hold word frequency
@@ -49,7 +77,7 @@ d3.json(`/satisfactiondata`).then(function(response){
         wordFrequency[currentWord] = 1;
       }
     }
-    console.log(wordFrequency);
+    // console.log(wordFrequency);
     var agree = wordFrequency.Agree;
     var str_agree = wordFrequency["Strongly Agree"];
     var str_disagree = wordFrequency["Strongly Disagree"];
@@ -65,10 +93,15 @@ d3.json(`/satisfactiondata`).then(function(response){
     return wordFrequency;
   }
   
-  wordCount(safety_day_mapped);
-  // wordCount(safety_night_mapped);
-  // wordCount(safety_parks_mapped);
-console.log(satisfactionData);
+  wordCount(safety_day_mapped2015);
+  wordCount(safety_day_mapped2016);
+  wordCount(safety_day_mapped2017);
+  wordCount(safety_night_mapped2015);
+  wordCount(safety_night_mapped2016);
+  wordCount(safety_night_mapped2015);
+  wordCount(safety_parks_mapped2017);
+  wordCount(safety_parks_mapped2016);
+  wordCount(safety_parks_mapped2017);
 
 
   // SAFETY LINE CHART
