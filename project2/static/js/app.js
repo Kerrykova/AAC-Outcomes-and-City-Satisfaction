@@ -16,7 +16,7 @@ var satisfactiondata;
 //   });
 // }
 
-function buildCharts(satisfaction) {
+function buildSatCharts(satisfaction) {
 // @TODO: Use `d3.json` to fetch the sample data for the plots
 d3.json(`/satisfactiondata`).then(function(response){
   // @TODO: Build a Bubble Chart using the sample data
@@ -89,7 +89,7 @@ d3.json(`/satisfactiondata`).then(function(response){
 
     var total_sat_percent = (total_sat / total)*100
 
-    console.log(total_sat_percent);
+    // console.log(total_sat_percent);
     return total_sat_percent;
   }
   wordCount(safety_day_mapped2015)
@@ -111,7 +111,7 @@ d3.json(`/satisfactiondata`).then(function(response){
   wordCount(safety_parks_mapped2016);
   var safety_parks2016 = wordCount(safety_parks_mapped2016);
   wordCount(safety_parks_mapped2017);
-  var safety_parks2017 = wordCount(safety_parks_mapped2016);
+  var safety_parks2017 = wordCount(safety_parks_mapped2017);
 
   // console.log(safety_day2016)
 
@@ -120,22 +120,25 @@ d3.json(`/satisfactiondata`).then(function(response){
   var safety_day_line = {
     x: [2015, 2016, 2017],
     y: [safety_day2015, safety_day2016, safety_day2017],
-    type: 'line',
-    name: 'Day'
+    type: 'scatter',
+    mode: 'lines+markers',
+    name: 'Day Safety'
   };
 
   var safety_night_line = {
     x: [2015, 2016, 2017],
     y: [safety_night2015, safety_night2016, safety_night2017],
-    type: 'line',
-    name: 'Night'
+    type: 'scatter',
+    mode: 'lines+markers',
+    name: 'Night Safety'
   };
 
   var safety_parks_line = {
     x: [2015, 2016, 2017],
-    y: [safety_parks2015, safety_day2016, safety_day2017],
-    type: 'line',
-    name: 'Park'
+    y: [safety_parks2015, safety_parks2016, safety_parks2017],
+    type: 'scatter',
+    mode: 'lines+markers',
+    name: 'Park Safety'
   };
 
   var safety_data = [safety_day_line, safety_night_line, safety_parks_line];
@@ -143,16 +146,19 @@ d3.json(`/satisfactiondata`).then(function(response){
     title: 'Percent of Residents who Feel Safe by Year',
     xaxis: {
       title: 'Year',
+      nticks: (3)
       // showgrid: false,
       // zeroline: false
     },
     yaxis: {
       title: 'Percent Satisfied',
-      range: [0, 100],
+      range: [50, 100],
       // showline: false
     }
   };
-  Plotly.newPlot('sample-safetydata', safety_data, layout);
+  var satgraph = document.getElementById('sample-safetydata')
+
+  Plotly.newPlot(satgraph, safety_data, layout);
 
 
 // ANIMAL OUTCOME LINE CHART
@@ -205,7 +211,7 @@ d3.json(`/satisfactiondata`).then(function(response){
 }
 
 function init() {
-  buildCharts();
+  buildSatCharts();
 };
 // Initialize the dashboard
 init();
