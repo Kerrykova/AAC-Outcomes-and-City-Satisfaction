@@ -90,40 +90,43 @@ d3.json(`/satisfactiondata`).then(function(response){
     var total_sat_percent = (total_sat / total)*100
 
     console.log(total_sat_percent);
-    return wordFrequency;
+    return total_sat_percent;
   }
-  
-  wordCount(safety_day_mapped2015);
+  wordCount(safety_day_mapped2015)
+  var safety_day2015 = wordCount(safety_day_mapped2015);
   wordCount(safety_day_mapped2016);
+  var safety_day2016 = wordCount(safety_day_mapped2016);
   wordCount(safety_day_mapped2017);
-  wordCount(safety_night_mapped2015);
-  wordCount(safety_night_mapped2016);
-  wordCount(safety_night_mapped2015);
-  wordCount(safety_parks_mapped2017);
-  wordCount(safety_parks_mapped2016);
-  wordCount(safety_parks_mapped2017);
+  var safety_day2017 = wordCount(safety_day_mapped2017);
 
+  // wordCount(safety_night_mapped2015);
+  // wordCount(safety_night_mapped2016);
+  // wordCount(safety_night_mapped2015);
+  // wordCount(safety_parks_mapped2017);
+  // wordCount(safety_parks_mapped2016);
+  // wordCount(safety_parks_mapped2017);
+  console.log(safety_day2016)
 
   // SAFETY LINE CHART
 
   var safety_day_line = {
     x: [2015, 2016, 2017],
-    y: [],
-    type: 'scatter',
+    y: [safety_day2015, safety_day2016, safety_day2017],
+    type: 'line',
     name: 'Day'
   };
 
   var safety_night_line = {
     x: [2015, 2016, 2017],
     y: [],
-    type: 'scatter',
+    type: 'line',
     name: 'Night'
   };
 
   var safety_parks_line = {
     x: [2015, 2016, 2017],
     y: [],
-    type: 'scatter',
+    type: 'line',
     name: 'Park'
   };
 
@@ -141,10 +144,11 @@ d3.json(`/satisfactiondata`).then(function(response){
       // showline: false
     }
   };
-
   Plotly.newPlot('sample-safetydata', safety_data, layout);
 
 
+<<<<<<< HEAD
+=======
 //     var pieData = [{
 //       values: topSamples,
 //       labels: topOtu,
@@ -184,82 +188,58 @@ d3.json(`/satisfactiondata`).then(function(response){
   
 //     Plotly.newPlot('bubble', data, layout);
 
+>>>>>>> 5dff26703f2a2def0fb7258a1cc21ecac0384204
 // ANIMAL OUTCOME LINE CHART
 
-var dog = {
-x: [2015, 2016, 2017],
-y: [],
-type: 'scatter',
-name: 'Dog'
-};
+// var dog = {
+// x: [2015, 2016, 2017],
+// y: [],
+// type: 'scatter',
+// name: 'Dog'
+// };
 
-var cat = {
-x: [2015, 2016, 2017],
-y: [],
-type: 'scatter',
-name: 'Cat'
-};
+// var cat = {
+// x: [2015, 2016, 2017],
+// y: [],
+// type: 'scatter',
+// name: 'Cat'
+// };
 
-var livestock = {
-x: [2015, 2016, 2017],
-y: [],
-type: 'scatter',
-name: 'Livestock'
-};
+// var livestock = {
+// x: [2015, 2016, 2017],
+// y: [],
+// type: 'scatter',
+// name: 'Livestock'
+// };
 
-var bird = {
-x: [2015, 2016, 2017],
-y: [],
-type: 'scatter',
-name: 'Bird'
-};
+// var bird = {
+// x: [2015, 2016, 2017],
+// y: [],
+// type: 'scatter',
+// name: 'Bird'
+// };
 
-var animal_outcome_data = [dog, cat, livestock, bird];
-var layout = {
-title: 'Percent of Animals Adopted and Returned to Owner',
-xaxis: {
-  title: 'Year',
-  // showgrid: false,
-  // zeroline: false
-},
-yaxis: {
-  title: 'Percent Adopted and Returned to Owner',
-  range: [0, 100],
-  // showline: false
-}
-};
+// var animal_outcome_data = [dog, cat, livestock, bird];
+// var layout = {
+// title: 'Percent of Animals Adopted and Returned to Owner',
+// xaxis: {
+//   title: 'Year',
+//   // showgrid: false,
+//   // zeroline: false
+// },
+// yaxis: {
+//   title: 'Percent Adopted and Returned to Owner',
+//   range: [0, 100],
+//   // showline: false
+// }
+// };
 
-Plotly.newPlot('myDiv', animal_outcome_data, layout);
+// Plotly.newPlot('sample-animaldata', animal_outcome_data, layout);
 });
 }
 
-
 function init() {
-// Grab a reference to the dropdown select element
-// var selector = d3.select("#selDataset");
-
-// // Use the list of sample names to populate the select options
-// // need to make unique(breed) then can use for the type of breeds in pie/line
-// d3.json("/aacdata").then((breeds) => {
-//   breeds.forEach((breed) => {
-//     selector
-//       .append("option")
-//       .text(breed)
-//       .property("value", breed);
-//   });
-
-  // Use the first sample from the list to build the initial plots
-  // const firstSample = sampleNames[0];
   buildCharts();
-  // buildMetadata(firstSample);
-// });
 };
-
-// function optionChanged(newSample) {
-//   // Fetch new data each time a new sample is selected
-//   buildCharts(newSample);
-//   buildMetadata(newSample);
-// }
-
 // Initialize the dashboard
 init();
