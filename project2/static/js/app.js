@@ -90,8 +90,8 @@ function buildCharts(sample) {
 //       values: topSamples,
 //       labels: topOtu,
 //       type: 'pie',
-//       hovertext: topLabels,
-//       hoverinfo: 'label+text+value+percent',
+      // hovertext: topLabels,
+      // hoverinfo: 'label+text+value+percent',
 //     }];
     
 //     var pieLayout = {
