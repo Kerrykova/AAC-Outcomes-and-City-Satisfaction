@@ -99,13 +99,21 @@ d3.json(`/satisfactiondata`).then(function(response){
   wordCount(safety_day_mapped2017);
   var safety_day2017 = wordCount(safety_day_mapped2017);
 
-  // wordCount(safety_night_mapped2015);
-  // wordCount(safety_night_mapped2016);
-  // wordCount(safety_night_mapped2015);
-  // wordCount(safety_parks_mapped2017);
-  // wordCount(safety_parks_mapped2016);
-  // wordCount(safety_parks_mapped2017);
-  console.log(safety_day2016)
+  wordCount(safety_night_mapped2015);
+  var safety_night2015 = wordCount(safety_night_mapped2015);
+  wordCount(safety_night_mapped2016);
+  var safety_night2016 = wordCount(safety_night_mapped2016);
+  wordCount(safety_night_mapped2017);
+  var safety_night2017 = wordCount(safety_night_mapped2017);
+
+  wordCount(safety_parks_mapped2015);
+  var safety_parks2015 = wordCount(safety_parks_mapped2015);
+  wordCount(safety_parks_mapped2016);
+  var safety_parks2016 = wordCount(safety_parks_mapped2016);
+  wordCount(safety_parks_mapped2017);
+  var safety_parks2017 = wordCount(safety_parks_mapped2016);
+
+  // console.log(safety_day2016)
 
   // SAFETY LINE CHART
 
@@ -118,14 +126,14 @@ d3.json(`/satisfactiondata`).then(function(response){
 
   var safety_night_line = {
     x: [2015, 2016, 2017],
-    y: [],
+    y: [safety_night2015, safety_night2016, safety_night2017],
     type: 'line',
     name: 'Night'
   };
 
   var safety_parks_line = {
     x: [2015, 2016, 2017],
-    y: [],
+    y: [safety_parks2015, safety_day2016, safety_day2017],
     type: 'line',
     name: 'Park'
   };
@@ -147,48 +155,6 @@ d3.json(`/satisfactiondata`).then(function(response){
   Plotly.newPlot('sample-safetydata', safety_data, layout);
 
 
-<<<<<<< HEAD
-=======
-//     var pieData = [{
-//       values: topSamples,
-//       labels: topOtu,
-//       type: 'pie',
-      // hovertext: topLabels,
-      // hoverinfo: 'label+text+value+percent',
-//     }];
-  
-//     var pieLayout = {
-//       height: 500,
-//       width: 500
-//     };
-  
-//     Plotly.newPlot('pie', pieData, pieLayout);
-
-//     // BUBBLE CHART
-//     var trace1 = {
-//       x: otu,
-//       y: sample,
-//       text: labels,
-//       mode: 'markers',
-//       marker: {
-//         color: otu,
-//         opacity: [1, 0.8, 0.6, 0.4],
-//         size: sample
-//       }
-//     };
-  
-//     var data = [trace1];
-  
-//     var layout = {
-//       title: 'Belly Button Biodiversity',
-//       showlegend: false,
-//       height: 500,
-//       width: 1200
-//     };
-  
-//     Plotly.newPlot('bubble', data, layout);
-
->>>>>>> 5dff26703f2a2def0fb7258a1cc21ecac0384204
 // ANIMAL OUTCOME LINE CHART
 
 // var dog = {
