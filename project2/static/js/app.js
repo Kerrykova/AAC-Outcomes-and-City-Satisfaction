@@ -2,6 +2,7 @@
 var satisfactionData;
 var animalData;
 
+
 // d3.json(`/satisfactiondata`).then(function(response){
 //   satisfactionsample = response;
 //   // Use d3 to select the panel with id of `#sample-metadata`
@@ -327,9 +328,32 @@ name: 'Cat'
 });
 }
 
+function drawChart() {
+  var myConfig = {
+    "type":"pie",
+    "title":{
+      "text":"Pie Chart"
+    },
+    "series":[
+      {"values":[59]},
+      {"values":[55]},
+      {"values":[30]},
+      {"values":[28]},
+      {"values":[15]}
+    ]
+  };
+   
+  zingchart.render({ 
+    id : 'pie', 
+    data : myConfig, 
+    height: 400, 
+    width: "100%" 
+  });
+}
 function init() {
   buildSatCharts();
   buildAnimalCharts();
+  drawChart();
 };
 // Initialize the dashboard
 init();
