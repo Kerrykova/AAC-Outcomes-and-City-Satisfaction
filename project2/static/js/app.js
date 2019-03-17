@@ -204,8 +204,8 @@ function buildAnimalCharts(animal) {
       aac2015cat.push(element)
     }
     });
-    console.log(aac2015dog);
-    console.log(aac2015cat);
+    // console.log(aac2015dog);
+    // console.log(aac2015cat);
 
     aac2016list.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -215,8 +215,8 @@ function buildAnimalCharts(animal) {
       aac2016cat.push(element)
     }
     });
-      console.log(aac2016dog);
-      console.log(aac2016cat);
+      // console.log(aac2016dog);
+      // console.log(aac2016cat);
 
     aac2017list.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -226,21 +226,65 @@ function buildAnimalCharts(animal) {
       aac2017cat.push(element)
     }
     });
-    console.log(aac2017dog);
-    console.log(aac2017cat);
+    // console.log(aac2017dog);
+    // console.log(aac2017cat);
 
-  });
-}
+    var dog2015 = aac2015dog.map(aac2015dog => aac2015dog.outcome_type);
+    var cat2015 = aac2015cat.map(aac2015cat => aac2015cat.outcome_type);
+    var dog2016 = aac2016dog.map(aac2016dog => aac2016dog.outcome_type);
+    var cat2015 = aac2016cat.map(aac2016cat => aac2016cat.outcome_type);
+    var dog2017 = aac2017dog.map(aac2017dog => aac2017dog.outcome_type);
+    var cat2015 = aac2017cat.map(aac2017cat => aac2017cat.outcome_type);
 
+    console.log(dog2015);
 
+    function wordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+        }
+        var adoption = wordFrequency.Adoption;
+        var rto = wordFrequency["Return to Owner"];
+        console.log(rto)
+        var transfer = wordFrequency.Transfer;
+        var died = wordFrequency.Died;
+        var euthanasia = wordFrequency.Euthanasia;
+        var missing = wordFrequency.Missing;
+
+        var total = adoption + rto + transfer + died + euthanasia + missing;
+        console.log(total)
+        var adoptionrto = adoption + rto;
+        console.log(adoptionrto);
+        var adoptionrtopct = adoptionrto / total * 100;
+        console.log(adoptionrtopct);
+        return adoptionrtopct;
+    }
+    wordCount(dog2015);
+
+    var dog_2015 = wordCount(dog2015);
+
+    console.log(dog_2015)
+    
 // ANIMAL OUTCOME LINE CHART
 
-// var dog = {
-// x: [2015, 2016, 2017],
-// y: [],
-// type: 'scatter',
-// name: 'Dog'
-// };
+  var dog = {
+  x: [2015, 2016, 2017],
+  y: [dog_2015, 50, 80],
+  type: 'scatter',
+  mode: 'lines+markers',
+  name: 'Dog'
+  };
 
 // var cat = {
 // x: [2015, 2016, 2017],
@@ -264,23 +308,27 @@ function buildAnimalCharts(animal) {
 // };
 
 // var animal_outcome_data = [dog, cat, livestock, bird];
-// var layout = {
-// title: 'Percent of Animals Adopted and Returned to Owner',
-// xaxis: {
-//   title: 'Year',
-//   // showgrid: false,
-//   // zeroline: false
-// },
-// yaxis: {
-//   title: 'Percent Adopted and Returned to Owner',
-//   range: [0, 100],
-//   // showline: false
-// }
-// };
+  var animal_outcome_data = [dog];
 
-// Plotly.newPlot('sample-animaldata', animal_outcome_data, layout);
-// });
-// }
+  var layout = {
+  title: 'Percent of Animals Adopted and Returned to Owner',
+  xaxis: {
+    title: 'Year',
+    nticks: (3)
+
+    // showgrid: false,
+    // zeroline: false
+  },
+  yaxis: {
+    title: 'Percent Adopted and Returned to Owner',
+    range: [0, 100],
+    // showline: false
+  }
+  };
+
+  Plotly.newPlot('sample-animaldata', animal_outcome_data, layout);
+});
+}
 
 function init() {
   buildSatCharts();
