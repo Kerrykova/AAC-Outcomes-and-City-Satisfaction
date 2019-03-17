@@ -134,6 +134,8 @@ d3.json(`/satisfactiondata`).then(function(response){
 
   var safety_data = [safety_day_line, safety_night_line, safety_parks_line];
   var layout = {
+    width: 550,
+    height: 400,
     title: 'Percent of Residents who Feel Safe by Year',
     xaxis: {
       title: 'Year',
@@ -283,13 +285,13 @@ function buildAnimalCharts(animal) {
   name: 'Dog'
   };
 
-var cat = {
-x: [2015, 2016, 2017],
-y: [cat_2015, cat_2016, cat_2017],
-type: 'scatter',
-mode: 'lines+markers',
-name: 'Cat'
-};
+  var cat = {
+  x: [2015, 2016, 2017],
+  y: [cat_2015, cat_2016, cat_2017],
+  type: 'scatter',
+  mode: 'lines+markers',
+  name: 'Cat'
+  };
 
 // var livestock = {
 // x: [2015, 2016, 2017],
@@ -309,6 +311,8 @@ name: 'Cat'
   var animal_outcome_data = [dog, cat];
 
   var layout = {
+  width: 550,
+  height: 400,
   title: 'Percent of Animals Adopted and Returned to Owner',
   xaxis: {
     title: 'Year',
