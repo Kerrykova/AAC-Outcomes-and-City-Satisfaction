@@ -1,5 +1,6 @@
 
-var satisfactiondata;
+var satisfactionData;
+var animalData;
 
 // d3.json(`/satisfactiondata`).then(function(response){
 //   satisfactionsample = response;
@@ -39,9 +40,9 @@ d3.json(`/satisfactiondata`).then(function(response){
 
   });
 
-  console.log(sat2015list)
-  console.log(sat2016list)
-  console.log(sat2017list)
+  // console.log(sat2015list)
+  // console.log(sat2016list)
+  // console.log(sat2017list)
 
   var safety_day_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_day);
   var safety_day_mapped2016 = sat2016list.map(sat2016list => sat2016list.safety_day);
@@ -159,6 +160,77 @@ d3.json(`/satisfactiondata`).then(function(response){
   var satgraph = document.getElementById('sample-safetydata')
 
   Plotly.newPlot(satgraph, safety_data, layout);
+});
+}
+  
+function buildAnimalCharts(animal) {
+    // @TODO: Use `d3.json` to fetch the sample data for the plots
+  d3.json(`/aacdata`).then(function(response){
+      // @TODO: Build a Bubble Chart using the sample data
+    animalData = response;
+    // console.log(animalData);
+
+    var aac2015list = [];
+    var aac2016list = [];
+    var aac2017list = [];
+
+    animalData.forEach(element => {
+    if (element.year === 2015){
+      aac2015list.push(element)
+    }
+    if (element.year === 2016) {
+      aac2016list.push(element)
+    }
+    if (element.year === 2017) {
+      aac2017list.push(element)
+    }
+    });
+  // console.log(aac2015list)
+  // console.log(aac2016list)
+  // console.log(aac2017list)
+
+    var aac2015dog = [];
+    var aac2015cat = [];
+    var aac2016dog = [];
+    var aac2016cat = [];    
+    var aac2017dog = [];
+    var aac2017cat = [];
+
+    aac2015list.forEach(element => {
+    if (element.animal_type === "Dog"){
+      aac2015dog.push(element)
+    }
+    if (element.animal_type === "Cat") {
+      aac2015cat.push(element)
+    }
+    });
+    console.log(aac2015dog);
+    console.log(aac2015cat);
+
+    aac2016list.forEach(element => {
+    if (element.animal_type === "Dog"){
+      aac2016dog.push(element)
+    }
+    if (element.animal_type === "Cat") {
+      aac2016cat.push(element)
+    }
+    });
+      console.log(aac2016dog);
+      console.log(aac2016cat);
+
+    aac2017list.forEach(element => {
+    if (element.animal_type === "Dog"){
+      aac2017dog.push(element)
+    }
+    if (element.animal_type === "Cat") {
+      aac2017cat.push(element)
+    }
+    });
+    console.log(aac2017dog);
+    console.log(aac2017cat);
+
+  });
+}
 
 
 // ANIMAL OUTCOME LINE CHART
@@ -207,11 +279,12 @@ d3.json(`/satisfactiondata`).then(function(response){
 // };
 
 // Plotly.newPlot('sample-animaldata', animal_outcome_data, layout);
-});
-}
+// });
+// }
 
 function init() {
   buildSatCharts();
+  buildAnimalCharts();
 };
 // Initialize the dashboard
 init();
