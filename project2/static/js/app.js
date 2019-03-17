@@ -40,10 +40,6 @@ d3.json(`/satisfactiondata`).then(function(response){
 
   });
 
-  // console.log(sat2015list)
-  // console.log(sat2016list)
-  // console.log(sat2017list)
-
   var safety_day_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_day);
   var safety_day_mapped2016 = sat2016list.map(sat2016list => sat2016list.safety_day);
   var safety_day_mapped2017 = sat2017list.map(sat2017list => sat2017list.safety_day);
@@ -56,10 +52,6 @@ d3.json(`/satisfactiondata`).then(function(response){
   var safety_parks_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_parks);
   var safety_parks_mapped2016 = sat2016list.map(sat2016list => sat2016list.safety_parks);
   var safety_parks_mapped2017 = sat2017list.map(sat2017list => sat2017list.safety_parks);
-
-  // console.log(safety_day_mapped2015);
-  // console.log(safety_night_mapped);
-  // console.log(safety_parks_mapped);
 
   function wordCount(data) {
   //   // An object to hold word frequency
@@ -78,7 +70,6 @@ d3.json(`/satisfactiondata`).then(function(response){
         wordFrequency[currentWord] = 1;
       }
     }
-    // console.log(wordFrequency);
     var agree = wordFrequency.Agree;
     var str_agree = wordFrequency["Strongly Agree"];
     var str_disagree = wordFrequency["Strongly Disagree"];
@@ -86,11 +77,9 @@ d3.json(`/satisfactiondata`).then(function(response){
     var disagree = wordFrequency.Disagree;
     var total = agree + neutral + disagree + str_agree + str_disagree;
     var total_sat = agree +str_agree;
-    // console.log (total);
 
     var total_sat_percent = (total_sat / total)*100
 
-    // console.log(total_sat_percent);
     return total_sat_percent;
   }
   wordCount(safety_day_mapped2015)
@@ -232,9 +221,9 @@ function buildAnimalCharts(animal) {
     var dog2015 = aac2015dog.map(aac2015dog => aac2015dog.outcome_type);
     var cat2015 = aac2015cat.map(aac2015cat => aac2015cat.outcome_type);
     var dog2016 = aac2016dog.map(aac2016dog => aac2016dog.outcome_type);
-    var cat2015 = aac2016cat.map(aac2016cat => aac2016cat.outcome_type);
+    var cat2016 = aac2016cat.map(aac2016cat => aac2016cat.outcome_type);
     var dog2017 = aac2017dog.map(aac2017dog => aac2017dog.outcome_type);
-    var cat2015 = aac2017cat.map(aac2017cat => aac2017cat.outcome_type);
+    var cat2017 = aac2017cat.map(aac2017cat => aac2017cat.outcome_type);
 
     console.log(dog2015);
 
@@ -263,35 +252,43 @@ function buildAnimalCharts(animal) {
         var missing = wordFrequency.Missing;
 
         var total = adoption + rto + transfer + died + euthanasia + missing;
-        console.log(total)
         var adoptionrto = adoption + rto;
-        console.log(adoptionrto);
         var adoptionrtopct = adoptionrto / total * 100;
-        console.log(adoptionrtopct);
         return adoptionrtopct;
     }
     wordCount(dog2015);
-
     var dog_2015 = wordCount(dog2015);
+    wordCount(dog2016);
+    var dog_2016 = wordCount(dog2016);
+    wordCount(dog2017);
+    var dog_2017 = wordCount(dog2017);
 
-    console.log(dog_2015)
+    wordCount(cat2015);
+    var cat_2015 = wordCount(cat2015);
+    wordCount(cat2016);
+    var cat_2016 = wordCount(cat2016);
+    wordCount(cat2017);
+    var cat_2017 = wordCount(cat2017);
+
+    // console.log(dog_2015)
     
 // ANIMAL OUTCOME LINE CHART
 
   var dog = {
   x: [2015, 2016, 2017],
-  y: [dog_2015, 50, 80],
+  y: [dog_2015, dog_2016, dog_2017],
   type: 'scatter',
   mode: 'lines+markers',
   name: 'Dog'
   };
 
-// var cat = {
-// x: [2015, 2016, 2017],
-// y: [],
-// type: 'scatter',
-// name: 'Cat'
-// };
+var cat = {
+x: [2015, 2016, 2017],
+y: [cat_2015, cat_2016, cat_2017],
+type: 'scatter',
+mode: 'lines+markers',
+name: 'Cat'
+};
 
 // var livestock = {
 // x: [2015, 2016, 2017],
@@ -308,7 +305,7 @@ function buildAnimalCharts(animal) {
 // };
 
 // var animal_outcome_data = [dog, cat, livestock, bird];
-  var animal_outcome_data = [dog];
+  var animal_outcome_data = [dog, cat];
 
   var layout = {
   title: 'Percent of Animals Adopted and Returned to Owner',
