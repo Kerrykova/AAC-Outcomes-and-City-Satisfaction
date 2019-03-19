@@ -18,167 +18,364 @@
             <connection class='textscan' directory='/Users/delaynabradshaw/Desktop/Project-2/Resources' filename='Community_Survey_2015__2016___2017.csv' password='' server='' />
           </named-connection>
         </named-connections>
-        <relation connection='textscan.0z8fwdx1vb0l4w1e71ac0176xbzo' name='Community_Survey_2015__2016___2017.csv' table='[Community_Survey_2015__2016___2017#csv]' type='table'>
-          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
-            <column datatype='integer' name='ID' ordinal='0' />
-            <column datatype='integer' name='Year' ordinal='1' />
-            <column datatype='string' name='Method' ordinal='2' />
-            <column datatype='string' name='The City of Austin as a place to live' ordinal='3' />
-            <column datatype='string' name='The City of Austin as a place to raise children' ordinal='4' />
-            <column datatype='string' name='The City of Austin as a place to work' ordinal='5' />
-            <column datatype='string' name='The City of Austin as a place to retire' ordinal='6' />
-            <column datatype='string' name='Overall value that you receive for your city tax dollars and fees' ordinal='7' />
-            <column datatype='string' name='Overall quality of life in the city' ordinal='8' />
-            <column datatype='string' name='How well the City of Austin is planning growth' ordinal='9' />
-            <column datatype='string' name='Overall quality of services provided by the City of Austin' ordinal='10' />
-            <column datatype='string' name='Overall quality of city parks and recreation' ordinal='11' />
-            <column datatype='string' name='Overall quality of city libraries' ordinal='12' />
-            <column datatype='string' name='Overall quality of public safety services (i.e. police, fire and ambulance)' ordinal='13' />
-            <column datatype='string' name='Overall quality of municipal court services (i.e. traffic and parking ticketprocessing, misdemeanor court cases, fine collectio' ordinal='14' />
-            <column datatype='string' name='Overall quality of the Austin-Bergstrom International Airport' ordinal='15' />
-            <column datatype='string' name='Overall quality of drinking water provided by Austin Water' ordinal='16' />
-            <column datatype='string' name='Overall quality of wastewater services provided by Austin Water' ordinal='17' />
-            <column datatype='string' name='Overall quality of electric utility services provided by Austin Energy' ordinal='18' />
-            <column datatype='string' name='Traffic flow on major highways (IH-35, Mopac Expy, US-183, Loop 360, SH-71)' ordinal='19' />
-            <column datatype='string' name='Traffic flow on major city streets (Congress Ave, Lamar Blvd, South First St,Burnet Rd, Parmer Lane, Riverside Drive, etc.)' ordinal='20' />
-            <column datatype='string' name='Overall maintenance of major city streets' ordinal='21' />
-            <column datatype='string' name='Overall maintenance of city sidewalks' ordinal='22' />
-            <column datatype='string' name='Overall management of stormwater runoff' ordinal='23' />
-            <column datatype='string' name='Overall effectiveness of communication by the City of Austin' ordinal='24' />
-            <column datatype='string' name='Overall quality of health and human services provided by the City (socialservices, public health services, and restaurant inspe' ordinal='25' />
-            <column datatype='string' name='Overall quality of planning and zoning services (Imagine Austincomprehensive plan, neighborhood/small area plans, zoning)' ordinal='26' />
-            <column datatype='string' name='Overall quality of development review, permitting and inspection services' ordinal='27' />
-            <column datatype='string' name='Animal services (shelter, adoptions, animal control, etc.)' ordinal='28' />
-            <column datatype='string' name='Overall maintenance of city streets and sidewalks' ordinal='29' />
-            <column datatype='string' name='Overall quality of planning, development review, permitting and inspection services' ordinal='30' />
-            <column datatype='string' name='I feel safe in my neighborhood during the day' ordinal='31' />
-            <column datatype='string' name='I feel safe in my neighborhood at night' ordinal='32' />
-            <column datatype='string' name='I feel safe in city parks' ordinal='33' />
-            <column datatype='string' name='I feel safe walking alone downtown during the day' ordinal='34' />
-            <column datatype='string' name='I feel safe walking alone downtown at night' ordinal='35' />
-            <column datatype='string' name='Condition of major city streets (Congress Ave, Lamar, South First, Burnet, etc.)' ordinal='36' />
-            <column datatype='string' name='Condition of streets in your neighborhood (residential streets)' ordinal='37' />
-            <column datatype='string' name='Condition of sidewalks in your neighborhood (if sidewalks exist)' ordinal='38' />
-            <column datatype='string' name='Timing of traffic signals on city streets' ordinal='39' />
-            <column datatype='string' name='Adequacy of street lighting in your community' ordinal='40' />
-            <column datatype='string' name='Pedestrian accessibility (availability/convenience of sidewalks and crosswalks)' ordinal='41' />
-            <column datatype='string' name='On-street bicycle accessibility (The City’s bicycle lane system/network)' ordinal='42' />
-            <column datatype='string' name='Off-street bicycle accessibility (The City’s urban trail network)' ordinal='43' />
-            <column datatype='string' name='Mowing and trimming along city streets' ordinal='44' />
-            <column datatype='string' name='Bicycle accessibility (The City&apos;s bicycle lane system/network)' ordinal='45' />
-            <column datatype='string' name='Overall quality of police services' ordinal='46' />
-            <column datatype='string' name='Speed of police response (how quickly police respond to emergencies)' ordinal='47' />
-            <column datatype='string' name='Enforcement of local traffic laws' ordinal='48' />
-            <column datatype='string' name='Overall quality of fire services' ordinal='49' />
-            <column datatype='string' name='Timeliness of fire department response to emergency location (how quicklyfirefighters respond to emergencies)' ordinal='50' />
-            <column datatype='string' name='Medical assistance provided by EMS (overall quality of ambulance services)' ordinal='51' />
-            <column datatype='string' name='Timeliness of EMS response to emergency location' ordinal='52' />
-            <column datatype='string' name='Water and wastewater utility response time to emergencies' ordinal='53' />
-            <column datatype='string' name='Water Conservation programs within Austin' ordinal='54' />
-            <column datatype='string' name='Energy Conservation program' ordinal='55' />
-            <column datatype='string' name='The water quality of lakes and streams' ordinal='56' />
-            <column datatype='string' name='Flood control efforts' ordinal='57' />
-            <column datatype='string' name='Number of City of Austin parks' ordinal='58' />
-            <column datatype='string' name='Number of City of Austin walking/biking trails' ordinal='59' />
-            <column datatype='string' name='Appearance of City of Austin park grounds located in Austin' ordinal='60' />
-            <column datatype='string' name='Overall quality of City of Austin parks and recreation programs or classesoffered by the City' ordinal='61' />
-            <column datatype='string' name='Quality of youth athletic programs offered by the City' ordinal='62' />
-            <column datatype='string' name='Quality of adult athletic programs offered by the City' ordinal='63' />
-            <column datatype='string' name='Quality of outdoor athletic fields in City of Austin parks (soccer/baseballfields, tennis courts)' ordinal='64' />
-            <column datatype='string' name='Safety in city parks and park facilities' ordinal='65' />
-            <column datatype='string' name='Safety of equipment or playscapes in City of Austin parks' ordinal='66' />
-            <column datatype='string' name='Overall satisfaction with City of Austin swimming pools' ordinal='67' />
-            <column datatype='string' name='Satisfaction with City of Austin aquatic programs or classes' ordinal='68' />
-            <column datatype='string' name='Quality of City of Austin Park facilities (includes recreation, senior, nature,cultural centers and museums)' ordinal='69' />
-            <column datatype='string' name='Cleanliness of library facilities' ordinal='70' />
-            <column datatype='string' name='Library programs' ordinal='71' />
-            <column datatype='string' name='Materials at libraries' ordinal='72' />
-            <column datatype='string' name='Library hours' ordinal='73' />
-            <column datatype='string' name='Quality of residential garbage collection' ordinal='74' />
-            <column datatype='string' name='Quality of residential yard waste collection' ordinal='75' />
-            <column datatype='string' name='Quality of residential curbside recycling services' ordinal='76' />
-            <column datatype='string' name='Household hazardous waste disposal service' ordinal='77' />
-            <column datatype='string' name='Bulky item pick-up/removal services' ordinal='78' />
-            <column datatype='string' name='Reliability of your electric service' ordinal='79' />
-            <column datatype='string' name='Safety of your drinking water' ordinal='80' />
-            <column datatype='string' name='Cleanliness of city streets and public areas' ordinal='81' />
-            <column datatype='string' name='Cleanliness of your neighborhood' ordinal='82' />
-            <column datatype='string' name='Code enforcement of weed lots, abandoned vehicles, graffiti anddilapidated buildings' ordinal='83' />
-            <column datatype='string' name='Enforcement of local codes and ordinances' ordinal='84' />
-            <column datatype='string' name='Austin Energy customer service' ordinal='85' />
-            <column datatype='string' name='Water and wastewater utility customer service' ordinal='86' />
-            <column datatype='string' name='Helpfulness of library staff' ordinal='87' />
-            <column datatype='string' name='Overall quality of customer service provided by the City of Austin' ordinal='88' />
-            <column datatype='string' name='Services provided by the City’s 3-1-1 assistance telephone number' ordinal='89' />
-            <column datatype='string' name='Review services for residential and commercial building plans' ordinal='90' />
-            <column datatype='string' name='Value of services received from Austin Energy' ordinal='91' />
-            <column datatype='string' name='Water and wastewater rates (cost)' ordinal='92' />
-            <column datatype='string' name='Availability of affordable housing for low/moderate income families' ordinal='93' />
-            <column datatype='string' name='The City’s efforts to offer financial literacy/homebuyer education' ordinal='94' />
-            <column datatype='string' name='City&apos;s effort to promote and assist small, minority and/or women-ownedbusinesses' ordinal='95' />
-            <column datatype='string' name='Shot for Tots and Big Shots program (immunizations)' ordinal='96' />
-            <column datatype='string' name='Food Safety Inspection program' ordinal='97' />
-            <column datatype='string' name='Neighborhood planning/zoning efforts' ordinal='98' />
-            <column datatype='string' name='Accessibility of municipal court services' ordinal='99' />
-            <column datatype='string' name='The City’s efforts to support diversity by serving people equally regardless of theirrace, religion, ethnicity, age, or abiliti' ordinal='100' />
-            <column datatype='string' name='Access to affordable quality housing' ordinal='101' />
-            <column datatype='string' name='Access to affordable quality child care' ordinal='102' />
-            <column datatype='string' name='Access to affordable quality health care' ordinal='103' />
-            <column datatype='string' name='Access to affordable quality food' ordinal='104' />
-            <column datatype='string' name='The City’s effort to support dialogue between residents and government' ordinal='105' />
-            <column datatype='string' name='Have you visited an Austin City park?' ordinal='106' />
-            <column datatype='string' name='Have you used a City of Austin walking/biking trail?' ordinal='107' />
-            <column datatype='string' name='Have you participated in a City of Austin recreation program/event?' ordinal='108' />
-            <column datatype='string' name='Have you visited an Austin library facility?' ordinal='109' />
-            <column datatype='string' name='Have you participated in a City of Austin Parks youth athletic program?' ordinal='110' />
-            <column datatype='string' name='Have you visited a City pool?' ordinal='111' />
-            <column datatype='string' name='Have you participated in a City of Austin Parks adult athletic program?' ordinal='112' />
-            <column datatype='string' name='Have you visited a City recreation center?' ordinal='113' />
-            <column datatype='string' name='Have you visited a City of Austin outdoor athletic field? (soccer/baseball field, tennis court)' ordinal='114' />
-            <column datatype='string' name='Have you had contact with the City of Austin Municipal Court? ' ordinal='115' />
-            <column datatype='string' name='Have you used park equipment, such as playscapes, while visiting a City of Austin Park?' ordinal='116' />
-            <column datatype='string' name='Have you had contact with the City for Code Enforcement?' ordinal='117' />
-            <column datatype='string' name='Have you visited the Austin-Bergstrom International Airport?' ordinal='118' />
-            <column datatype='string' name='Have you participated in a City of Austin aquatic program or class?' ordinal='119' />
-            <column datatype='string' name='Have you called 3-1-1?' ordinal='120' />
-            <column datatype='string' name='Have you called 9-1-1?' ordinal='121' />
-            <column datatype='string' name='Have you used the City’s bicycle lane system/network?' ordinal='122' />
-            <column datatype='string' name='Have you had contact with the Austin Police Department?' ordinal='123' />
-            <column datatype='string' name='Have you used the City’s urban trail network?' ordinal='124' />
-            <column datatype='string' name='Have you had contact with the Austin Fire Department?' ordinal='125' />
-            <column datatype='string' name='Have you had contact with the Emergency Medical Services Department?' ordinal='126' />
-            <column datatype='string' name='Have you participated in a City of Austin library program?' ordinal='127' />
-            <column datatype='string' name='Does Austin Energy provide your electric service?' ordinal='128' />
-            <column datatype='string' name='Does the City of Austin collect garbage at your residence?' ordinal='129' />
-            <column datatype='string' name='Does the City of Austin provide your home with water and wastewater services?' ordinal='130' />
-            <column datatype='string' name='Have you had contact with Austin Public Health? (social services, public health services, etc.)' ordinal='131' />
-            <column datatype='string' name='Have you had contact with the Planning and Zoning department (zoning, neighborhood/small area plans,Imagine Austin comprehensiv' ordinal='132' />
-            <column datatype='string' name='Have you had contact with the City’s Development Services department? (permitting, inspections)' ordinal='133' />
-            <column datatype='string' name='Have you visited the Austin Animal Center?' ordinal='134' />
-            <column datatype='string' name='Employees of the City ofAustin are ethical in the way they conduct City business.' ordinal='135' />
-            <column datatype='string' name='Approximately how many years have you lived in the City of Austin?' ordinal='136' />
-            <column datatype='string' name='Which of the following best describes your AGE?' ordinal='137' />
-            <column datatype='string' name='How many dependents (including yourself) did your household claim on its most recentfederal taxes?' ordinal='138' />
-            <column datatype='string' name='Which of the following best describes your RACE? African American' ordinal='139' />
-            <column datatype='string' name='Which of the following best describes your RACE? American Indian' ordinal='140' />
-            <column datatype='string' name='Which of the following best describes your RACE? Asian/Pacific Islander' ordinal='141' />
-            <column datatype='string' name='Which of the following best describes your RACE? Caucasian/White' ordinal='142' />
-            <column datatype='string' name='Which of the following best describes your RACE? Other' ordinal='143' />
-            <column datatype='string' name='Which of the following best describes your RACE? Define' ordinal='144' />
-            <column datatype='string' name='Are you Hispanic, Latino, or of other Spanish ancestry?' ordinal='145' />
-            <column datatype='string' name='Race/Ethnicity Recode' ordinal='146' />
-            <column datatype='integer' name='How many children, if any, do you have in your household who use childcare services such asdaycare, after school programs, and/' ordinal='147' />
-            <column datatype='string' name='Which of the following best describes your annual household income?' ordinal='148' />
-            <column datatype='string' name='What is your gender?' ordinal='149' />
-            <column datatype='string' name='Do you own or rent your home?' ordinal='150' />
-            <column datatype='integer' name='What is your HOME zip code? (Self-Reported)' ordinal='151' />
-            <column datatype='integer' name='Zip Code' ordinal='152' />
-            <column datatype='integer' name='Council District' ordinal='153' />
-            <column datatype='real' name='Block Level X Longitude' ordinal='154' />
-            <column datatype='real' name='Block Level Y Latitude' ordinal='155' />
-            <column datatype='datetime' name='Date as of Date' ordinal='156' />
-          </columns>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[Community_Survey_2015__2016___2017.csv].[ID]' />
+              <expression op='[Austin_Animal_Center_Outcomes.csv].[ID]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0z8fwdx1vb0l4w1e71ac0176xbzo' name='Community_Survey_2015__2016___2017.csv' table='[Community_Survey_2015__2016___2017#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='ID' ordinal='0' />
+              <column datatype='integer' name='Year' ordinal='1' />
+              <column datatype='string' name='Method' ordinal='2' />
+              <column datatype='string' name='The City of Austin as a place to live' ordinal='3' />
+              <column datatype='string' name='The City of Austin as a place to raise children' ordinal='4' />
+              <column datatype='string' name='The City of Austin as a place to work' ordinal='5' />
+              <column datatype='string' name='The City of Austin as a place to retire' ordinal='6' />
+              <column datatype='string' name='Overall value that you receive for your city tax dollars and fees' ordinal='7' />
+              <column datatype='string' name='Overall quality of life in the city' ordinal='8' />
+              <column datatype='string' name='How well the City of Austin is planning growth' ordinal='9' />
+              <column datatype='string' name='Overall quality of services provided by the City of Austin' ordinal='10' />
+              <column datatype='string' name='Overall quality of city parks and recreation' ordinal='11' />
+              <column datatype='string' name='Overall quality of city libraries' ordinal='12' />
+              <column datatype='string' name='Overall quality of public safety services (i.e. police, fire and ambulance)' ordinal='13' />
+              <column datatype='string' name='Overall quality of municipal court services (i.e. traffic and parking ticketprocessing, misdemeanor court cases, fine collectio' ordinal='14' />
+              <column datatype='string' name='Overall quality of the Austin-Bergstrom International Airport' ordinal='15' />
+              <column datatype='string' name='Overall quality of drinking water provided by Austin Water' ordinal='16' />
+              <column datatype='string' name='Overall quality of wastewater services provided by Austin Water' ordinal='17' />
+              <column datatype='string' name='Overall quality of electric utility services provided by Austin Energy' ordinal='18' />
+              <column datatype='string' name='Traffic flow on major highways (IH-35, Mopac Expy, US-183, Loop 360, SH-71)' ordinal='19' />
+              <column datatype='string' name='Traffic flow on major city streets (Congress Ave, Lamar Blvd, South First St,Burnet Rd, Parmer Lane, Riverside Drive, etc.)' ordinal='20' />
+              <column datatype='string' name='Overall maintenance of major city streets' ordinal='21' />
+              <column datatype='string' name='Overall maintenance of city sidewalks' ordinal='22' />
+              <column datatype='string' name='Overall management of stormwater runoff' ordinal='23' />
+              <column datatype='string' name='Overall effectiveness of communication by the City of Austin' ordinal='24' />
+              <column datatype='string' name='Overall quality of health and human services provided by the City (socialservices, public health services, and restaurant inspe' ordinal='25' />
+              <column datatype='string' name='Overall quality of planning and zoning services (Imagine Austincomprehensive plan, neighborhood/small area plans, zoning)' ordinal='26' />
+              <column datatype='string' name='Overall quality of development review, permitting and inspection services' ordinal='27' />
+              <column datatype='string' name='Animal services (shelter, adoptions, animal control, etc.)' ordinal='28' />
+              <column datatype='string' name='Overall maintenance of city streets and sidewalks' ordinal='29' />
+              <column datatype='string' name='Overall quality of planning, development review, permitting and inspection services' ordinal='30' />
+              <column datatype='string' name='I feel safe in my neighborhood during the day' ordinal='31' />
+              <column datatype='string' name='I feel safe in my neighborhood at night' ordinal='32' />
+              <column datatype='string' name='I feel safe in city parks' ordinal='33' />
+              <column datatype='string' name='I feel safe walking alone downtown during the day' ordinal='34' />
+              <column datatype='string' name='I feel safe walking alone downtown at night' ordinal='35' />
+              <column datatype='string' name='Condition of major city streets (Congress Ave, Lamar, South First, Burnet, etc.)' ordinal='36' />
+              <column datatype='string' name='Condition of streets in your neighborhood (residential streets)' ordinal='37' />
+              <column datatype='string' name='Condition of sidewalks in your neighborhood (if sidewalks exist)' ordinal='38' />
+              <column datatype='string' name='Timing of traffic signals on city streets' ordinal='39' />
+              <column datatype='string' name='Adequacy of street lighting in your community' ordinal='40' />
+              <column datatype='string' name='Pedestrian accessibility (availability/convenience of sidewalks and crosswalks)' ordinal='41' />
+              <column datatype='string' name='On-street bicycle accessibility (The City’s bicycle lane system/network)' ordinal='42' />
+              <column datatype='string' name='Off-street bicycle accessibility (The City’s urban trail network)' ordinal='43' />
+              <column datatype='string' name='Mowing and trimming along city streets' ordinal='44' />
+              <column datatype='string' name='Bicycle accessibility (The City&apos;s bicycle lane system/network)' ordinal='45' />
+              <column datatype='string' name='Overall quality of police services' ordinal='46' />
+              <column datatype='string' name='Speed of police response (how quickly police respond to emergencies)' ordinal='47' />
+              <column datatype='string' name='Enforcement of local traffic laws' ordinal='48' />
+              <column datatype='string' name='Overall quality of fire services' ordinal='49' />
+              <column datatype='string' name='Timeliness of fire department response to emergency location (how quicklyfirefighters respond to emergencies)' ordinal='50' />
+              <column datatype='string' name='Medical assistance provided by EMS (overall quality of ambulance services)' ordinal='51' />
+              <column datatype='string' name='Timeliness of EMS response to emergency location' ordinal='52' />
+              <column datatype='string' name='Water and wastewater utility response time to emergencies' ordinal='53' />
+              <column datatype='string' name='Water Conservation programs within Austin' ordinal='54' />
+              <column datatype='string' name='Energy Conservation program' ordinal='55' />
+              <column datatype='string' name='The water quality of lakes and streams' ordinal='56' />
+              <column datatype='string' name='Flood control efforts' ordinal='57' />
+              <column datatype='string' name='Number of City of Austin parks' ordinal='58' />
+              <column datatype='string' name='Number of City of Austin walking/biking trails' ordinal='59' />
+              <column datatype='string' name='Appearance of City of Austin park grounds located in Austin' ordinal='60' />
+              <column datatype='string' name='Overall quality of City of Austin parks and recreation programs or classesoffered by the City' ordinal='61' />
+              <column datatype='string' name='Quality of youth athletic programs offered by the City' ordinal='62' />
+              <column datatype='string' name='Quality of adult athletic programs offered by the City' ordinal='63' />
+              <column datatype='string' name='Quality of outdoor athletic fields in City of Austin parks (soccer/baseballfields, tennis courts)' ordinal='64' />
+              <column datatype='string' name='Safety in city parks and park facilities' ordinal='65' />
+              <column datatype='string' name='Safety of equipment or playscapes in City of Austin parks' ordinal='66' />
+              <column datatype='string' name='Overall satisfaction with City of Austin swimming pools' ordinal='67' />
+              <column datatype='string' name='Satisfaction with City of Austin aquatic programs or classes' ordinal='68' />
+              <column datatype='string' name='Quality of City of Austin Park facilities (includes recreation, senior, nature,cultural centers and museums)' ordinal='69' />
+              <column datatype='string' name='Cleanliness of library facilities' ordinal='70' />
+              <column datatype='string' name='Library programs' ordinal='71' />
+              <column datatype='string' name='Materials at libraries' ordinal='72' />
+              <column datatype='string' name='Library hours' ordinal='73' />
+              <column datatype='string' name='Quality of residential garbage collection' ordinal='74' />
+              <column datatype='string' name='Quality of residential yard waste collection' ordinal='75' />
+              <column datatype='string' name='Quality of residential curbside recycling services' ordinal='76' />
+              <column datatype='string' name='Household hazardous waste disposal service' ordinal='77' />
+              <column datatype='string' name='Bulky item pick-up/removal services' ordinal='78' />
+              <column datatype='string' name='Reliability of your electric service' ordinal='79' />
+              <column datatype='string' name='Safety of your drinking water' ordinal='80' />
+              <column datatype='string' name='Cleanliness of city streets and public areas' ordinal='81' />
+              <column datatype='string' name='Cleanliness of your neighborhood' ordinal='82' />
+              <column datatype='string' name='Code enforcement of weed lots, abandoned vehicles, graffiti anddilapidated buildings' ordinal='83' />
+              <column datatype='string' name='Enforcement of local codes and ordinances' ordinal='84' />
+              <column datatype='string' name='Austin Energy customer service' ordinal='85' />
+              <column datatype='string' name='Water and wastewater utility customer service' ordinal='86' />
+              <column datatype='string' name='Helpfulness of library staff' ordinal='87' />
+              <column datatype='string' name='Overall quality of customer service provided by the City of Austin' ordinal='88' />
+              <column datatype='string' name='Services provided by the City’s 3-1-1 assistance telephone number' ordinal='89' />
+              <column datatype='string' name='Review services for residential and commercial building plans' ordinal='90' />
+              <column datatype='string' name='Value of services received from Austin Energy' ordinal='91' />
+              <column datatype='string' name='Water and wastewater rates (cost)' ordinal='92' />
+              <column datatype='string' name='Availability of affordable housing for low/moderate income families' ordinal='93' />
+              <column datatype='string' name='The City’s efforts to offer financial literacy/homebuyer education' ordinal='94' />
+              <column datatype='string' name='City&apos;s effort to promote and assist small, minority and/or women-ownedbusinesses' ordinal='95' />
+              <column datatype='string' name='Shot for Tots and Big Shots program (immunizations)' ordinal='96' />
+              <column datatype='string' name='Food Safety Inspection program' ordinal='97' />
+              <column datatype='string' name='Neighborhood planning/zoning efforts' ordinal='98' />
+              <column datatype='string' name='Accessibility of municipal court services' ordinal='99' />
+              <column datatype='string' name='The City’s efforts to support diversity by serving people equally regardless of theirrace, religion, ethnicity, age, or abiliti' ordinal='100' />
+              <column datatype='string' name='Access to affordable quality housing' ordinal='101' />
+              <column datatype='string' name='Access to affordable quality child care' ordinal='102' />
+              <column datatype='string' name='Access to affordable quality health care' ordinal='103' />
+              <column datatype='string' name='Access to affordable quality food' ordinal='104' />
+              <column datatype='string' name='The City’s effort to support dialogue between residents and government' ordinal='105' />
+              <column datatype='string' name='Have you visited an Austin City park?' ordinal='106' />
+              <column datatype='string' name='Have you used a City of Austin walking/biking trail?' ordinal='107' />
+              <column datatype='string' name='Have you participated in a City of Austin recreation program/event?' ordinal='108' />
+              <column datatype='string' name='Have you visited an Austin library facility?' ordinal='109' />
+              <column datatype='string' name='Have you participated in a City of Austin Parks youth athletic program?' ordinal='110' />
+              <column datatype='string' name='Have you visited a City pool?' ordinal='111' />
+              <column datatype='string' name='Have you participated in a City of Austin Parks adult athletic program?' ordinal='112' />
+              <column datatype='string' name='Have you visited a City recreation center?' ordinal='113' />
+              <column datatype='string' name='Have you visited a City of Austin outdoor athletic field? (soccer/baseball field, tennis court)' ordinal='114' />
+              <column datatype='string' name='Have you had contact with the City of Austin Municipal Court? ' ordinal='115' />
+              <column datatype='string' name='Have you used park equipment, such as playscapes, while visiting a City of Austin Park?' ordinal='116' />
+              <column datatype='string' name='Have you had contact with the City for Code Enforcement?' ordinal='117' />
+              <column datatype='string' name='Have you visited the Austin-Bergstrom International Airport?' ordinal='118' />
+              <column datatype='string' name='Have you participated in a City of Austin aquatic program or class?' ordinal='119' />
+              <column datatype='string' name='Have you called 3-1-1?' ordinal='120' />
+              <column datatype='string' name='Have you called 9-1-1?' ordinal='121' />
+              <column datatype='string' name='Have you used the City’s bicycle lane system/network?' ordinal='122' />
+              <column datatype='string' name='Have you had contact with the Austin Police Department?' ordinal='123' />
+              <column datatype='string' name='Have you used the City’s urban trail network?' ordinal='124' />
+              <column datatype='string' name='Have you had contact with the Austin Fire Department?' ordinal='125' />
+              <column datatype='string' name='Have you had contact with the Emergency Medical Services Department?' ordinal='126' />
+              <column datatype='string' name='Have you participated in a City of Austin library program?' ordinal='127' />
+              <column datatype='string' name='Does Austin Energy provide your electric service?' ordinal='128' />
+              <column datatype='string' name='Does the City of Austin collect garbage at your residence?' ordinal='129' />
+              <column datatype='string' name='Does the City of Austin provide your home with water and wastewater services?' ordinal='130' />
+              <column datatype='string' name='Have you had contact with Austin Public Health? (social services, public health services, etc.)' ordinal='131' />
+              <column datatype='string' name='Have you had contact with the Planning and Zoning department (zoning, neighborhood/small area plans,Imagine Austin comprehensiv' ordinal='132' />
+              <column datatype='string' name='Have you had contact with the City’s Development Services department? (permitting, inspections)' ordinal='133' />
+              <column datatype='string' name='Have you visited the Austin Animal Center?' ordinal='134' />
+              <column datatype='string' name='Employees of the City ofAustin are ethical in the way they conduct City business.' ordinal='135' />
+              <column datatype='string' name='Approximately how many years have you lived in the City of Austin?' ordinal='136' />
+              <column datatype='string' name='Which of the following best describes your AGE?' ordinal='137' />
+              <column datatype='string' name='How many dependents (including yourself) did your household claim on its most recentfederal taxes?' ordinal='138' />
+              <column datatype='string' name='Which of the following best describes your RACE? African American' ordinal='139' />
+              <column datatype='string' name='Which of the following best describes your RACE? American Indian' ordinal='140' />
+              <column datatype='string' name='Which of the following best describes your RACE? Asian/Pacific Islander' ordinal='141' />
+              <column datatype='string' name='Which of the following best describes your RACE? Caucasian/White' ordinal='142' />
+              <column datatype='string' name='Which of the following best describes your RACE? Other' ordinal='143' />
+              <column datatype='string' name='Which of the following best describes your RACE? Define' ordinal='144' />
+              <column datatype='string' name='Are you Hispanic, Latino, or of other Spanish ancestry?' ordinal='145' />
+              <column datatype='string' name='Race/Ethnicity Recode' ordinal='146' />
+              <column datatype='integer' name='How many children, if any, do you have in your household who use childcare services such asdaycare, after school programs, and/' ordinal='147' />
+              <column datatype='string' name='Which of the following best describes your annual household income?' ordinal='148' />
+              <column datatype='string' name='What is your gender?' ordinal='149' />
+              <column datatype='string' name='Do you own or rent your home?' ordinal='150' />
+              <column datatype='integer' name='What is your HOME zip code? (Self-Reported)' ordinal='151' />
+              <column datatype='integer' name='Zip Code' ordinal='152' />
+              <column datatype='integer' name='Council District' ordinal='153' />
+              <column datatype='real' name='Block Level X Longitude' ordinal='154' />
+              <column datatype='real' name='Block Level Y Latitude' ordinal='155' />
+              <column datatype='datetime' name='Date as of Date' ordinal='156' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0z8fwdx1vb0l4w1e71ac0176xbzo' name='Austin_Animal_Center_Outcomes.csv' table='[Austin_Animal_Center_Outcomes#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='ID' ordinal='0' />
+              <column datatype='string' name='Animal ID' ordinal='1' />
+              <column datatype='string' name='Name' ordinal='2' />
+              <column datatype='datetime' name='DateTime' ordinal='3' />
+              <column datatype='datetime' name='MonthYear' ordinal='4' />
+              <column datatype='date' name='Date of Birth' ordinal='5' />
+              <column datatype='string' name='Outcome Type' ordinal='6' />
+              <column datatype='string' name='Outcome Subtype' ordinal='7' />
+              <column datatype='string' name='Animal Type' ordinal='8' />
+              <column datatype='string' name='Sex upon Outcome' ordinal='9' />
+              <column datatype='string' name='Age upon Outcome' ordinal='10' />
+              <column datatype='string' name='Breed' ordinal='11' />
+              <column datatype='string' name='Color' ordinal='12' />
+            </columns>
+          </relation>
         </relation>
+        <cols>
+          <map key='[Access to affordable quality child care]' value='[Community_Survey_2015__2016___2017.csv].[Access to affordable quality child care]' />
+          <map key='[Access to affordable quality food]' value='[Community_Survey_2015__2016___2017.csv].[Access to affordable quality food]' />
+          <map key='[Access to affordable quality health care]' value='[Community_Survey_2015__2016___2017.csv].[Access to affordable quality health care]' />
+          <map key='[Access to affordable quality housing]' value='[Community_Survey_2015__2016___2017.csv].[Access to affordable quality housing]' />
+          <map key='[Accessibility of municipal court services]' value='[Community_Survey_2015__2016___2017.csv].[Accessibility of municipal court services]' />
+          <map key='[Adequacy of street lighting in your community]' value='[Community_Survey_2015__2016___2017.csv].[Adequacy of street lighting in your community]' />
+          <map key='[Age upon Outcome]' value='[Austin_Animal_Center_Outcomes.csv].[Age upon Outcome]' />
+          <map key='[Animal ID]' value='[Austin_Animal_Center_Outcomes.csv].[Animal ID]' />
+          <map key='[Animal Type]' value='[Austin_Animal_Center_Outcomes.csv].[Animal Type]' />
+          <map key='[Animal services (shelter, adoptions, animal control, etc.)]' value='[Community_Survey_2015__2016___2017.csv].[Animal services (shelter, adoptions, animal control, etc.)]' />
+          <map key='[Appearance of City of Austin park grounds located in Austin]' value='[Community_Survey_2015__2016___2017.csv].[Appearance of City of Austin park grounds located in Austin]' />
+          <map key='[Approximately how many years have you lived in the City of Austin?]' value='[Community_Survey_2015__2016___2017.csv].[Approximately how many years have you lived in the City of Austin?]' />
+          <map key='[Are you Hispanic, Latino, or of other Spanish ancestry?]' value='[Community_Survey_2015__2016___2017.csv].[Are you Hispanic, Latino, or of other Spanish ancestry?]' />
+          <map key='[Austin Energy customer service]' value='[Community_Survey_2015__2016___2017.csv].[Austin Energy customer service]' />
+          <map key='[Availability of affordable housing for low/moderate income families]' value='[Community_Survey_2015__2016___2017.csv].[Availability of affordable housing for low/moderate income families]' />
+          <map key='[Bicycle accessibility (The City&apos;s bicycle lane system/network)]' value='[Community_Survey_2015__2016___2017.csv].[Bicycle accessibility (The City&apos;s bicycle lane system/network)]' />
+          <map key='[Block Level X Longitude]' value='[Community_Survey_2015__2016___2017.csv].[Block Level X Longitude]' />
+          <map key='[Block Level Y Latitude]' value='[Community_Survey_2015__2016___2017.csv].[Block Level Y Latitude]' />
+          <map key='[Breed]' value='[Austin_Animal_Center_Outcomes.csv].[Breed]' />
+          <map key='[Bulky item pick-up/removal services]' value='[Community_Survey_2015__2016___2017.csv].[Bulky item pick-up/removal services]' />
+          <map key='[City&apos;s effort to promote and assist small, minority and/or women-ownedbusinesses]' value='[Community_Survey_2015__2016___2017.csv].[City&apos;s effort to promote and assist small, minority and/or women-ownedbusinesses]' />
+          <map key='[Cleanliness of city streets and public areas]' value='[Community_Survey_2015__2016___2017.csv].[Cleanliness of city streets and public areas]' />
+          <map key='[Cleanliness of library facilities]' value='[Community_Survey_2015__2016___2017.csv].[Cleanliness of library facilities]' />
+          <map key='[Cleanliness of your neighborhood]' value='[Community_Survey_2015__2016___2017.csv].[Cleanliness of your neighborhood]' />
+          <map key='[Code enforcement of weed lots, abandoned vehicles, graffiti anddilapidated buildings]' value='[Community_Survey_2015__2016___2017.csv].[Code enforcement of weed lots, abandoned vehicles, graffiti anddilapidated buildings]' />
+          <map key='[Color]' value='[Austin_Animal_Center_Outcomes.csv].[Color]' />
+          <map key='[Condition of major city streets (Congress Ave, Lamar, South First, Burnet, etc.)]' value='[Community_Survey_2015__2016___2017.csv].[Condition of major city streets (Congress Ave, Lamar, South First, Burnet, etc.)]' />
+          <map key='[Condition of sidewalks in your neighborhood (if sidewalks exist)]' value='[Community_Survey_2015__2016___2017.csv].[Condition of sidewalks in your neighborhood (if sidewalks exist)]' />
+          <map key='[Condition of streets in your neighborhood (residential streets)]' value='[Community_Survey_2015__2016___2017.csv].[Condition of streets in your neighborhood (residential streets)]' />
+          <map key='[Council District]' value='[Community_Survey_2015__2016___2017.csv].[Council District]' />
+          <map key='[Date as of Date]' value='[Community_Survey_2015__2016___2017.csv].[Date as of Date]' />
+          <map key='[Date of Birth]' value='[Austin_Animal_Center_Outcomes.csv].[Date of Birth]' />
+          <map key='[DateTime]' value='[Austin_Animal_Center_Outcomes.csv].[DateTime]' />
+          <map key='[Do you own or rent your home?]' value='[Community_Survey_2015__2016___2017.csv].[Do you own or rent your home?]' />
+          <map key='[Does Austin Energy provide your electric service?]' value='[Community_Survey_2015__2016___2017.csv].[Does Austin Energy provide your electric service?]' />
+          <map key='[Does the City of Austin collect garbage at your residence?]' value='[Community_Survey_2015__2016___2017.csv].[Does the City of Austin collect garbage at your residence?]' />
+          <map key='[Does the City of Austin provide your home with water and wastewater services?]' value='[Community_Survey_2015__2016___2017.csv].[Does the City of Austin provide your home with water and wastewater services?]' />
+          <map key='[Employees of the City ofAustin are ethical in the way they conduct City business.]' value='[Community_Survey_2015__2016___2017.csv].[Employees of the City ofAustin are ethical in the way they conduct City business.]' />
+          <map key='[Energy Conservation program]' value='[Community_Survey_2015__2016___2017.csv].[Energy Conservation program]' />
+          <map key='[Enforcement of local codes and ordinances]' value='[Community_Survey_2015__2016___2017.csv].[Enforcement of local codes and ordinances]' />
+          <map key='[Enforcement of local traffic laws]' value='[Community_Survey_2015__2016___2017.csv].[Enforcement of local traffic laws]' />
+          <map key='[Flood control efforts]' value='[Community_Survey_2015__2016___2017.csv].[Flood control efforts]' />
+          <map key='[Food Safety Inspection program]' value='[Community_Survey_2015__2016___2017.csv].[Food Safety Inspection program]' />
+          <map key='[Have you called 3-1-1?]' value='[Community_Survey_2015__2016___2017.csv].[Have you called 3-1-1?]' />
+          <map key='[Have you called 9-1-1?]' value='[Community_Survey_2015__2016___2017.csv].[Have you called 9-1-1?]' />
+          <map key='[Have you had contact with Austin Public Health? (social services, public health services, etc.)]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with Austin Public Health? (social services, public health services, etc.)]' />
+          <map key='[Have you had contact with the Austin Fire Department?]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the Austin Fire Department?]' />
+          <map key='[Have you had contact with the Austin Police Department?]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the Austin Police Department?]' />
+          <map key='[Have you had contact with the City for Code Enforcement?]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the City for Code Enforcement?]' />
+          <map key='[Have you had contact with the City of Austin Municipal Court? ]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the City of Austin Municipal Court? ]' />
+          <map key='[Have you had contact with the City’s Development Services department? (permitting, inspections)]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the City’s Development Services department? (permitting, inspections)]' />
+          <map key='[Have you had contact with the Emergency Medical Services Department?]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the Emergency Medical Services Department?]' />
+          <map key='[Have you had contact with the Planning and Zoning department (zoning, neighborhood/small area plans,Imagine Austin comprehensiv]' value='[Community_Survey_2015__2016___2017.csv].[Have you had contact with the Planning and Zoning department (zoning, neighborhood/small area plans,Imagine Austin comprehensiv]' />
+          <map key='[Have you participated in a City of Austin Parks adult athletic program?]' value='[Community_Survey_2015__2016___2017.csv].[Have you participated in a City of Austin Parks adult athletic program?]' />
+          <map key='[Have you participated in a City of Austin Parks youth athletic program?]' value='[Community_Survey_2015__2016___2017.csv].[Have you participated in a City of Austin Parks youth athletic program?]' />
+          <map key='[Have you participated in a City of Austin aquatic program or class?]' value='[Community_Survey_2015__2016___2017.csv].[Have you participated in a City of Austin aquatic program or class?]' />
+          <map key='[Have you participated in a City of Austin library program?]' value='[Community_Survey_2015__2016___2017.csv].[Have you participated in a City of Austin library program?]' />
+          <map key='[Have you participated in a City of Austin recreation program/event?]' value='[Community_Survey_2015__2016___2017.csv].[Have you participated in a City of Austin recreation program/event?]' />
+          <map key='[Have you used a City of Austin walking/biking trail?]' value='[Community_Survey_2015__2016___2017.csv].[Have you used a City of Austin walking/biking trail?]' />
+          <map key='[Have you used park equipment, such as playscapes, while visiting a City of Austin Park?]' value='[Community_Survey_2015__2016___2017.csv].[Have you used park equipment, such as playscapes, while visiting a City of Austin Park?]' />
+          <map key='[Have you used the City’s bicycle lane system/network?]' value='[Community_Survey_2015__2016___2017.csv].[Have you used the City’s bicycle lane system/network?]' />
+          <map key='[Have you used the City’s urban trail network?]' value='[Community_Survey_2015__2016___2017.csv].[Have you used the City’s urban trail network?]' />
+          <map key='[Have you visited a City of Austin outdoor athletic field? (soccer/baseball field, tennis court)]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited a City of Austin outdoor athletic field? (soccer/baseball field, tennis court)]' />
+          <map key='[Have you visited a City pool?]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited a City pool?]' />
+          <map key='[Have you visited a City recreation center?]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited a City recreation center?]' />
+          <map key='[Have you visited an Austin City park?]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited an Austin City park?]' />
+          <map key='[Have you visited an Austin library facility?]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited an Austin library facility?]' />
+          <map key='[Have you visited the Austin Animal Center?]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited the Austin Animal Center?]' />
+          <map key='[Have you visited the Austin-Bergstrom International Airport?]' value='[Community_Survey_2015__2016___2017.csv].[Have you visited the Austin-Bergstrom International Airport?]' />
+          <map key='[Helpfulness of library staff]' value='[Community_Survey_2015__2016___2017.csv].[Helpfulness of library staff]' />
+          <map key='[Household hazardous waste disposal service]' value='[Community_Survey_2015__2016___2017.csv].[Household hazardous waste disposal service]' />
+          <map key='[How many children, if any, do you have in your household who use childcare services such asdaycare, after school programs, and/]' value='[Community_Survey_2015__2016___2017.csv].[How many children, if any, do you have in your household who use childcare services such asdaycare, after school programs, and/]' />
+          <map key='[How many dependents (including yourself) did your household claim on its most recentfederal taxes?]' value='[Community_Survey_2015__2016___2017.csv].[How many dependents (including yourself) did your household claim on its most recentfederal taxes?]' />
+          <map key='[How well the City of Austin is planning growth]' value='[Community_Survey_2015__2016___2017.csv].[How well the City of Austin is planning growth]' />
+          <map key='[I feel safe in city parks]' value='[Community_Survey_2015__2016___2017.csv].[I feel safe in city parks]' />
+          <map key='[I feel safe in my neighborhood at night]' value='[Community_Survey_2015__2016___2017.csv].[I feel safe in my neighborhood at night]' />
+          <map key='[I feel safe in my neighborhood during the day]' value='[Community_Survey_2015__2016___2017.csv].[I feel safe in my neighborhood during the day]' />
+          <map key='[I feel safe walking alone downtown at night]' value='[Community_Survey_2015__2016___2017.csv].[I feel safe walking alone downtown at night]' />
+          <map key='[I feel safe walking alone downtown during the day]' value='[Community_Survey_2015__2016___2017.csv].[I feel safe walking alone downtown during the day]' />
+          <map key='[ID (Austin_Animal_Center_Outcomes.csv)]' value='[Austin_Animal_Center_Outcomes.csv].[ID]' />
+          <map key='[ID]' value='[Community_Survey_2015__2016___2017.csv].[ID]' />
+          <map key='[Library hours]' value='[Community_Survey_2015__2016___2017.csv].[Library hours]' />
+          <map key='[Library programs]' value='[Community_Survey_2015__2016___2017.csv].[Library programs]' />
+          <map key='[Materials at libraries]' value='[Community_Survey_2015__2016___2017.csv].[Materials at libraries]' />
+          <map key='[Medical assistance provided by EMS (overall quality of ambulance services)]' value='[Community_Survey_2015__2016___2017.csv].[Medical assistance provided by EMS (overall quality of ambulance services)]' />
+          <map key='[Method]' value='[Community_Survey_2015__2016___2017.csv].[Method]' />
+          <map key='[MonthYear]' value='[Austin_Animal_Center_Outcomes.csv].[MonthYear]' />
+          <map key='[Mowing and trimming along city streets]' value='[Community_Survey_2015__2016___2017.csv].[Mowing and trimming along city streets]' />
+          <map key='[Name]' value='[Austin_Animal_Center_Outcomes.csv].[Name]' />
+          <map key='[Neighborhood planning/zoning efforts]' value='[Community_Survey_2015__2016___2017.csv].[Neighborhood planning/zoning efforts]' />
+          <map key='[Number of City of Austin parks]' value='[Community_Survey_2015__2016___2017.csv].[Number of City of Austin parks]' />
+          <map key='[Number of City of Austin walking/biking trails]' value='[Community_Survey_2015__2016___2017.csv].[Number of City of Austin walking/biking trails]' />
+          <map key='[Off-street bicycle accessibility (The City’s urban trail network)]' value='[Community_Survey_2015__2016___2017.csv].[Off-street bicycle accessibility (The City’s urban trail network)]' />
+          <map key='[On-street bicycle accessibility (The City’s bicycle lane system/network)]' value='[Community_Survey_2015__2016___2017.csv].[On-street bicycle accessibility (The City’s bicycle lane system/network)]' />
+          <map key='[Outcome Subtype]' value='[Austin_Animal_Center_Outcomes.csv].[Outcome Subtype]' />
+          <map key='[Outcome Type]' value='[Austin_Animal_Center_Outcomes.csv].[Outcome Type]' />
+          <map key='[Overall effectiveness of communication by the City of Austin]' value='[Community_Survey_2015__2016___2017.csv].[Overall effectiveness of communication by the City of Austin]' />
+          <map key='[Overall maintenance of city sidewalks]' value='[Community_Survey_2015__2016___2017.csv].[Overall maintenance of city sidewalks]' />
+          <map key='[Overall maintenance of city streets and sidewalks]' value='[Community_Survey_2015__2016___2017.csv].[Overall maintenance of city streets and sidewalks]' />
+          <map key='[Overall maintenance of major city streets]' value='[Community_Survey_2015__2016___2017.csv].[Overall maintenance of major city streets]' />
+          <map key='[Overall management of stormwater runoff]' value='[Community_Survey_2015__2016___2017.csv].[Overall management of stormwater runoff]' />
+          <map key='[Overall quality of City of Austin parks and recreation programs or classesoffered by the City]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of City of Austin parks and recreation programs or classesoffered by the City]' />
+          <map key='[Overall quality of city libraries]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of city libraries]' />
+          <map key='[Overall quality of city parks and recreation]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of city parks and recreation]' />
+          <map key='[Overall quality of customer service provided by the City of Austin]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of customer service provided by the City of Austin]' />
+          <map key='[Overall quality of development review, permitting and inspection services]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of development review, permitting and inspection services]' />
+          <map key='[Overall quality of drinking water provided by Austin Water]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of drinking water provided by Austin Water]' />
+          <map key='[Overall quality of electric utility services provided by Austin Energy]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of electric utility services provided by Austin Energy]' />
+          <map key='[Overall quality of fire services]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of fire services]' />
+          <map key='[Overall quality of health and human services provided by the City (socialservices, public health services, and restaurant inspe]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of health and human services provided by the City (socialservices, public health services, and restaurant inspe]' />
+          <map key='[Overall quality of life in the city]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of life in the city]' />
+          <map key='[Overall quality of municipal court services (i.e. traffic and parking ticketprocessing, misdemeanor court cases, fine collectio]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of municipal court services (i.e. traffic and parking ticketprocessing, misdemeanor court cases, fine collectio]' />
+          <map key='[Overall quality of planning and zoning services (Imagine Austincomprehensive plan, neighborhood/small area plans, zoning)]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of planning and zoning services (Imagine Austincomprehensive plan, neighborhood/small area plans, zoning)]' />
+          <map key='[Overall quality of planning, development review, permitting and inspection services]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of planning, development review, permitting and inspection services]' />
+          <map key='[Overall quality of police services]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of police services]' />
+          <map key='[Overall quality of public safety services (i.e. police, fire and ambulance)]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of public safety services (i.e. police, fire and ambulance)]' />
+          <map key='[Overall quality of services provided by the City of Austin]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of services provided by the City of Austin]' />
+          <map key='[Overall quality of the Austin-Bergstrom International Airport]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of the Austin-Bergstrom International Airport]' />
+          <map key='[Overall quality of wastewater services provided by Austin Water]' value='[Community_Survey_2015__2016___2017.csv].[Overall quality of wastewater services provided by Austin Water]' />
+          <map key='[Overall satisfaction with City of Austin swimming pools]' value='[Community_Survey_2015__2016___2017.csv].[Overall satisfaction with City of Austin swimming pools]' />
+          <map key='[Overall value that you receive for your city tax dollars and fees]' value='[Community_Survey_2015__2016___2017.csv].[Overall value that you receive for your city tax dollars and fees]' />
+          <map key='[Pedestrian accessibility (availability/convenience of sidewalks and crosswalks)]' value='[Community_Survey_2015__2016___2017.csv].[Pedestrian accessibility (availability/convenience of sidewalks and crosswalks)]' />
+          <map key='[Quality of City of Austin Park facilities (includes recreation, senior, nature,cultural centers and museums)]' value='[Community_Survey_2015__2016___2017.csv].[Quality of City of Austin Park facilities (includes recreation, senior, nature,cultural centers and museums)]' />
+          <map key='[Quality of adult athletic programs offered by the City]' value='[Community_Survey_2015__2016___2017.csv].[Quality of adult athletic programs offered by the City]' />
+          <map key='[Quality of outdoor athletic fields in City of Austin parks (soccer/baseballfields, tennis courts)]' value='[Community_Survey_2015__2016___2017.csv].[Quality of outdoor athletic fields in City of Austin parks (soccer/baseballfields, tennis courts)]' />
+          <map key='[Quality of residential curbside recycling services]' value='[Community_Survey_2015__2016___2017.csv].[Quality of residential curbside recycling services]' />
+          <map key='[Quality of residential garbage collection]' value='[Community_Survey_2015__2016___2017.csv].[Quality of residential garbage collection]' />
+          <map key='[Quality of residential yard waste collection]' value='[Community_Survey_2015__2016___2017.csv].[Quality of residential yard waste collection]' />
+          <map key='[Quality of youth athletic programs offered by the City]' value='[Community_Survey_2015__2016___2017.csv].[Quality of youth athletic programs offered by the City]' />
+          <map key='[Race/Ethnicity Recode]' value='[Community_Survey_2015__2016___2017.csv].[Race/Ethnicity Recode]' />
+          <map key='[Reliability of your electric service]' value='[Community_Survey_2015__2016___2017.csv].[Reliability of your electric service]' />
+          <map key='[Review services for residential and commercial building plans]' value='[Community_Survey_2015__2016___2017.csv].[Review services for residential and commercial building plans]' />
+          <map key='[Safety in city parks and park facilities]' value='[Community_Survey_2015__2016___2017.csv].[Safety in city parks and park facilities]' />
+          <map key='[Safety of equipment or playscapes in City of Austin parks]' value='[Community_Survey_2015__2016___2017.csv].[Safety of equipment or playscapes in City of Austin parks]' />
+          <map key='[Safety of your drinking water]' value='[Community_Survey_2015__2016___2017.csv].[Safety of your drinking water]' />
+          <map key='[Satisfaction with City of Austin aquatic programs or classes]' value='[Community_Survey_2015__2016___2017.csv].[Satisfaction with City of Austin aquatic programs or classes]' />
+          <map key='[Services provided by the City’s 3-1-1 assistance telephone number]' value='[Community_Survey_2015__2016___2017.csv].[Services provided by the City’s 3-1-1 assistance telephone number]' />
+          <map key='[Sex upon Outcome]' value='[Austin_Animal_Center_Outcomes.csv].[Sex upon Outcome]' />
+          <map key='[Shot for Tots and Big Shots program (immunizations)]' value='[Community_Survey_2015__2016___2017.csv].[Shot for Tots and Big Shots program (immunizations)]' />
+          <map key='[Speed of police response (how quickly police respond to emergencies)]' value='[Community_Survey_2015__2016___2017.csv].[Speed of police response (how quickly police respond to emergencies)]' />
+          <map key='[The City of Austin as a place to live]' value='[Community_Survey_2015__2016___2017.csv].[The City of Austin as a place to live]' />
+          <map key='[The City of Austin as a place to raise children]' value='[Community_Survey_2015__2016___2017.csv].[The City of Austin as a place to raise children]' />
+          <map key='[The City of Austin as a place to retire]' value='[Community_Survey_2015__2016___2017.csv].[The City of Austin as a place to retire]' />
+          <map key='[The City of Austin as a place to work]' value='[Community_Survey_2015__2016___2017.csv].[The City of Austin as a place to work]' />
+          <map key='[The City’s effort to support dialogue between residents and government]' value='[Community_Survey_2015__2016___2017.csv].[The City’s effort to support dialogue between residents and government]' />
+          <map key='[The City’s efforts to offer financial literacy/homebuyer education]' value='[Community_Survey_2015__2016___2017.csv].[The City’s efforts to offer financial literacy/homebuyer education]' />
+          <map key='[The City’s efforts to support diversity by serving people equally regardless of theirrace, religion, ethnicity, age, or abiliti]' value='[Community_Survey_2015__2016___2017.csv].[The City’s efforts to support diversity by serving people equally regardless of theirrace, religion, ethnicity, age, or abiliti]' />
+          <map key='[The water quality of lakes and streams]' value='[Community_Survey_2015__2016___2017.csv].[The water quality of lakes and streams]' />
+          <map key='[Timeliness of EMS response to emergency location]' value='[Community_Survey_2015__2016___2017.csv].[Timeliness of EMS response to emergency location]' />
+          <map key='[Timeliness of fire department response to emergency location (how quicklyfirefighters respond to emergencies)]' value='[Community_Survey_2015__2016___2017.csv].[Timeliness of fire department response to emergency location (how quicklyfirefighters respond to emergencies)]' />
+          <map key='[Timing of traffic signals on city streets]' value='[Community_Survey_2015__2016___2017.csv].[Timing of traffic signals on city streets]' />
+          <map key='[Traffic flow on major city streets (Congress Ave, Lamar Blvd, South First St,Burnet Rd, Parmer Lane, Riverside Drive, etc.)]' value='[Community_Survey_2015__2016___2017.csv].[Traffic flow on major city streets (Congress Ave, Lamar Blvd, South First St,Burnet Rd, Parmer Lane, Riverside Drive, etc.)]' />
+          <map key='[Traffic flow on major highways (IH-35, Mopac Expy, US-183, Loop 360, SH-71)]' value='[Community_Survey_2015__2016___2017.csv].[Traffic flow on major highways (IH-35, Mopac Expy, US-183, Loop 360, SH-71)]' />
+          <map key='[Value of services received from Austin Energy]' value='[Community_Survey_2015__2016___2017.csv].[Value of services received from Austin Energy]' />
+          <map key='[Water Conservation programs within Austin]' value='[Community_Survey_2015__2016___2017.csv].[Water Conservation programs within Austin]' />
+          <map key='[Water and wastewater rates (cost)]' value='[Community_Survey_2015__2016___2017.csv].[Water and wastewater rates (cost)]' />
+          <map key='[Water and wastewater utility customer service]' value='[Community_Survey_2015__2016___2017.csv].[Water and wastewater utility customer service]' />
+          <map key='[Water and wastewater utility response time to emergencies]' value='[Community_Survey_2015__2016___2017.csv].[Water and wastewater utility response time to emergencies]' />
+          <map key='[What is your HOME zip code? (Self-Reported)]' value='[Community_Survey_2015__2016___2017.csv].[What is your HOME zip code? (Self-Reported)]' />
+          <map key='[What is your gender?]' value='[Community_Survey_2015__2016___2017.csv].[What is your gender?]' />
+          <map key='[Which of the following best describes your AGE?]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your AGE?]' />
+          <map key='[Which of the following best describes your RACE? African American]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your RACE? African American]' />
+          <map key='[Which of the following best describes your RACE? American Indian]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your RACE? American Indian]' />
+          <map key='[Which of the following best describes your RACE? Asian/Pacific Islander]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your RACE? Asian/Pacific Islander]' />
+          <map key='[Which of the following best describes your RACE? Caucasian/White]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your RACE? Caucasian/White]' />
+          <map key='[Which of the following best describes your RACE? Define]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your RACE? Define]' />
+          <map key='[Which of the following best describes your RACE? Other]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your RACE? Other]' />
+          <map key='[Which of the following best describes your annual household income?]' value='[Community_Survey_2015__2016___2017.csv].[Which of the following best describes your annual household income?]' />
+          <map key='[Year]' value='[Community_Survey_2015__2016___2017.csv].[Year]' />
+          <map key='[Zip Code]' value='[Community_Survey_2015__2016___2017.csv].[Zip Code]' />
+        </cols>
         <metadata-records>
           <metadata-record class='capability'>
             <remote-name />
@@ -2367,6 +2564,192 @@
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
           </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID (Austin_Animal_Center_Outcomes.csv)]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>157</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Animal ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Animal ID]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Animal ID</remote-alias>
+            <ordinal>158</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Name]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Name</remote-alias>
+            <ordinal>159</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateTime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[DateTime]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>DateTime</remote-alias>
+            <ordinal>160</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MonthYear</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[MonthYear]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>MonthYear</remote-alias>
+            <ordinal>161</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date of Birth</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date of Birth]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Date of Birth</remote-alias>
+            <ordinal>162</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Outcome Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Outcome Type]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Outcome Type</remote-alias>
+            <ordinal>163</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Outcome Subtype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Outcome Subtype]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Outcome Subtype</remote-alias>
+            <ordinal>164</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Animal Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Animal Type]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Animal Type</remote-alias>
+            <ordinal>165</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sex upon Outcome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sex upon Outcome]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Sex upon Outcome</remote-alias>
+            <ordinal>166</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age upon Outcome</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Age upon Outcome]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Age upon Outcome</remote-alias>
+            <ordinal>167</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Breed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Breed]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Breed</remote-alias>
+            <ordinal>168</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Color</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Color]</local-name>
+            <parent-name>[Austin_Animal_Center_Outcomes.csv]</parent-name>
+            <remote-alias>Color</remote-alias>
+            <ordinal>169</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
@@ -2381,6 +2764,7 @@
       <column datatype='string' name='[City&apos;s effort to promote and assist small, minority and/or women-ownedbusinesses]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Cleanliness of city streets and public areas]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Condition of major city streets (Congress Ave, Lamar, South First, Burnet, etc.)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Date Time' datatype='datetime' name='[DateTime]' role='dimension' type='ordinal' />
       <column datatype='string' name='[Does the City of Austin collect garbage at your residence?]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Does the City of Austin provide your home with water and wastewater services?]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Employees of the City ofAustin are ethical in the way they conduct City business.]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
@@ -2403,7 +2787,9 @@
       <column datatype='string' name='[How well the City of Austin is planning growth]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column aggregation='CountD' datatype='string' name='[I feel safe in city parks]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[I feel safe in my neighborhood at night]' role='dimension' type='nominal' />
+      <column caption='ID (Austin Animal Center Outcomes.csv)' datatype='integer' name='[ID (Austin_Animal_Center_Outcomes.csv)]' role='dimension' type='ordinal' />
       <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Month Year' datatype='datetime' name='[MonthYear]' role='dimension' type='ordinal' />
       <column datatype='string' name='[Mowing and trimming along city streets]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Number of City of Austin parks]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Number of City of Austin walking/biking trails]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
@@ -2448,20 +2834,12 @@
       <column-instance column='[Calculation_1737404331658797106]' derivation='Attribute' name='[attr:Calculation_1737404331658797106:ok]' pivot='key' type='ordinal' />
       <column-instance column='[Calculation_1737404331658797106]' derivation='Count' name='[cnt:Calculation_1737404331658797106:ok]' pivot='key' type='ordinal' />
       <column-instance column='[I feel safe in my neighborhood at night]' derivation='None' name='[none:I feel safe in my neighborhood at night:nk]' pivot='key' type='nominal' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.667932' measure-ordering='alphabetic' measure-percentage='0.332068' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.669002' measure-ordering='alphabetic' measure-percentage='0.330998' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[pcto:attr:Calculation_1737404331628310545:ok:1]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>0.017543859649122806</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[cnt:Calculation_1737404331658797106:ok]' type='palette'>
             <map to='#4e79a7'>
-              <bucket>2.0</bucket>
+              <bucket>2</bucket>
             </map>
             <map to='#f28e2b'>
               <bucket>1</bucket>
@@ -2472,7 +2850,7 @@
               <bucket>2.0</bucket>
             </map>
             <map to='#f28e2b'>
-              <bucket>1</bucket>
+              <bucket>1.0</bucket>
             </map>
           </encoding>
           <encoding attr='color' field='[none:I feel safe in my neighborhood at night:nk]' palette='cyclic_10_0' type='palette'>
