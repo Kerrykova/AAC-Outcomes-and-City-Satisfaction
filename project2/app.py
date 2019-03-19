@@ -53,10 +53,13 @@ def satisfaction():
     # print(type(results))
     for result in results:
         satisfaction_result = {}
+        satisfaction_result['quality_of_life'] = result.quality_of_life
+        satisfaction_result['animal_services'] = result.animal_services
         satisfaction_result['safety_day'] = result.safety_day
         satisfaction_result['safety_night'] = result.safety_night
         satisfaction_result['safety_parks'] = result.safety_parks
         satisfaction_result['year'] = result.year
+
 
         allsatisfaction.append(satisfaction_result)
         # print(result.safety_day)
