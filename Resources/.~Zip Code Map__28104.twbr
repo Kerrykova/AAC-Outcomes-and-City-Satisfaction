@@ -2448,9 +2448,25 @@
       <column-instance column='[Calculation_1737404331658797106]' derivation='Attribute' name='[attr:Calculation_1737404331658797106:ok]' pivot='key' type='ordinal' />
       <column-instance column='[Calculation_1737404331658797106]' derivation='Count' name='[cnt:Calculation_1737404331658797106:ok]' pivot='key' type='ordinal' />
       <column-instance column='[I feel safe in my neighborhood at night]' derivation='None' name='[none:I feel safe in my neighborhood at night:nk]' pivot='key' type='nominal' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.667932' measure-ordering='alphabetic' measure-percentage='0.332068' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.669002' measure-ordering='alphabetic' measure-percentage='0.330998' show-structure='true' />
       <style>
         <style-rule element='mark'>
+          <encoding attr='color' field='[cnt:Calculation_1737404331658797106:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Calculation_1737404331658797106:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>2.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1.0</bucket>
+            </map>
+          </encoding>
           <encoding attr='color' field='[none:I feel safe in my neighborhood at night:nk]' palette='cyclic_10_0' type='palette'>
             <map to='#1ba3c6'>
               <bucket>&quot;Strongly Agree&quot;</bucket>
@@ -2469,30 +2485,6 @@
             </map>
             <map to='#f8b620'>
               <bucket>&quot;Strongly Disagree&quot;</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[pcto:attr:Calculation_1737404331628310545:ok:1]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>0.017543859649122806</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>%null%</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[cnt:Calculation_1737404331658797106:ok]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>2.0</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>1</bucket>
-            </map>
-          </encoding>
-          <encoding attr='color' field='[attr:Calculation_1737404331658797106:ok]' type='palette'>
-            <map to='#4e79a7'>
-              <bucket>2.0</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>1</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -2613,8 +2605,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.10afuli0n1xl001cex1qy0hc6dex].[Longitude (generated)]' field-type='quantitative' max='-10842045.871443279' min='-10922607.533355225' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.10afuli0n1xl001cex1qy0hc6dex].[Latitude (generated)]' field-type='quantitative' max='3570568.2793240342' min='3519682.4386361507' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.10afuli0n1xl001cex1qy0hc6dex].[Longitude (generated)]' field-type='quantitative' max='-10812265.165268319' min='-10947753.192679921' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.10afuli0n1xl001cex1qy0hc6dex].[Latitude (generated)]' field-type='quantitative' max='3588135.7947426573' min='3502556.3514397363' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='mark'>
             <encoding attr='color' field='[federated.10afuli0n1xl001cex1qy0hc6dex].[usr:Calculation_1737404331665825858:qk]' min='50.0' num-steps='10' palette='blue_teal_10_0' type='interpolated' />
@@ -2723,7 +2715,7 @@
         </edge>
       </cards>
       <viewpoint>
-        <default-map-tool-selection tool='2' />
+        <default-map-tool-selection tool='1' />
       </viewpoint>
       <simple-id uuid='{071A4D0B-A183-4BD6-9D6B-404EF7CEB46B}' />
     </window>
