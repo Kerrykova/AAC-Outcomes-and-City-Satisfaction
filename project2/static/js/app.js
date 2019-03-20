@@ -373,7 +373,7 @@ function buildAnimalCharts(animal) {
     wordCount(livestock2017);
     var livestock_2017 = wordCount(livestock2017);
 
-    // console.log(dog_2015)
+    console.log(dog_2015)
     
 // ANIMAL OUTCOME LINE CHART
 
@@ -437,12 +437,13 @@ function buildAnimalCharts(animal) {
 function buildPieCharts(animal) {
   // @TODO: Use `d3.json` to fetch the sample data for the plots
 d3.json(`/aacdata`).then(function(response){
-    // @TODO: Build a Bubble Chart using the sample data
   animalData = response;
-  // console.log(animalData)
 
   var aacDog = [];
   var aacCat = [];
+  var aacOther = [];
+  // var aacLS = [];
+  var aacBird = [];
 
   animalData.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -451,21 +452,26 @@ d3.json(`/aacdata`).then(function(response){
     if (element.animal_type === "Cat") {
       aacCat.push(element)
     }
+    if (element.animal_type === "Other") {
+      aacOther.push(element)
+    }
+    if (element.animal_type === "Bird") {
+      aacBird.push(element)
+    }
+
     });
-  console.log(aacDog)
-  // console.log(aacCat)
+
   // });
 
   var dogcount = aacDog.map(aacDog => aacDog.animal_type);
-  console.log(dogcount)
-
   var catcount = aacCat.map(aacCat => aacCat.animal_type);
-  console.log(catcount)
-  
+  var birdcount = aacBird.map(aacBird => aacBird.animal_type);
+  // var lscount = aacLS.map(aacLS => aacLS.animal_type);
+  var othercount = aacOther.map(aacOther => aacOther.animal_type);
+
   function wordCount(data) {
     //   // An object to hold word frequency
       var wordFrequency = {};
-    
     //   // Iterate through the array
       for (var i = 0; i < data.length; i++) {
         var currentWord = data[i];
@@ -479,133 +485,143 @@ d3.json(`/aacdata`).then(function(response){
           wordFrequency[currentWord] = 1;
         }
         }
-        // console.log(wordFrequency)
-
-      // var total = dogCount + catCount + otherCount + birdCount + livestockCount;
-        return wordFrequency;
-
+        return wordFrequency.Dog;
     };
-
-    // var dogcount = aacDog.map(aacDog => aacDog.animal_type);
-    // console.log(dogcount)
-
-
     wordCount(dogcount)
     dogcounted = wordCount(dogcount)
-    console.log(dogcounted)
 
-    wordCount(catcount)
-    catcounted = wordCount(catcount)
-    console.log(catcounted)
-
-    // wordCount(othercount)
-    // othercounted = wordCount(othercount)
-
-    // wordCount(livestockcount)
-    // livestockcounted = wordCount(livestockcount)
-
-    // wordCount(birdcount)
-    // birdcounted = wordCount(birdcount)
-
-    // console.log(dogcounted)
-
-
-  //   // function drawChart() {
-  //     var myConfig = {
-  //       "type":"pie",
-  //       "title":{
-  //         "text":"Pie Chart"
-  //       },
-  //       "series":[
-  //         {"values":[10]},
-  //         {"values":[20]},
-  //         // {"values":[otherCount]},
-  //         // {"values":[birdCount]},
-  //         // {"values":[livestockCount]}
-  //       ]
-  //   };
-  //   zingchart.render({ 
-  //     id : 'pie', 
-  //     data : myConfig, 
-  //     height: 400, 
-  //     width: "100%" 
-  //   });
-  //   // drawChart();
-  // // };
-
-});
-};
-
-
-  function drawTypeChart() {
-    var myConfig = {
-      "type":"pie",
-      "title":{
-        "text":"Austin Animal Center Animal Types"
-      },
-      "series":[
-        {"values":[30156]},
-        {"values":[20541]},
-        // {"values":[otherCount]},
-        // {"values":[birdCount]},
-        // {"values":[livestockCount]}
-      ]
+  function catwordCount(data) {
+    //   // An object to hold word frequency
+      var wordFrequency = {};
+    //   // Iterate through the array
+      for (var i = 0; i < data.length; i++) {
+        var currentWord = data[i];
+        // If the word has been seen before...
+        if (currentWord in wordFrequency) {
+    //       // Add one to the counter
+          wordFrequency[currentWord] += 1;
+        }
+        else {
+          // Set the counter at 1
+          wordFrequency[currentWord] = 1;
+        }
+        }
+        return wordFrequency.Cat;
     };
-     
-    zingchart.render({ 
-      id : 'pie', 
-      data : myConfig, 
-      height: 400, 
-      width: "100%" 
-    });
-  };
+    catwordCount(catcount)
+    catcounted = catwordCount(catcount)
 
-  function drawOutcomeChart() {
-    var myConfig = {
-      "type":"pie",
-      "title":{
-        "text":"Austin Animal Center Animal Outcomes"
-      },
-      "series":[
-        {"values":[34]},
-        {"values":[57]}
-        // {"values":[middle]},
-        // {"values":[old]}
-      ]
+    function birdwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency.Bird;
+      };
+
+    birdwordCount(birdcount)
+    birdcounted = birdwordCount(birdcount)
+
+    function otherwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency.Other;
+      };
+    otherwordCount(othercount)
+    othercounted = otherwordCount(othercount)
+
+    function drawTypeChart() {
+      var myConfig = {
+        "type":"pie",
+        "title":{
+          "text":"Austin Animal Center Animal Types"
+        },
+        "series":[
+          {"values":[dogcounted]},
+          {"values":[catcounted]},
+          {"values":[birdcounted]},
+          {"values":[othercounted]},
+          // {"values":[lscounted]}
+        ]
+      };
+      
+      zingchart.render({ 
+        id : 'pie', 
+        data : myConfig, 
+        height: 400, 
+        width: "100%" 
+      });
     };
-     
-    zingchart.render({ 
-      id : 'pie', 
-      data : myConfig, 
-      height: 400, 
-      width: "100%" 
-    });
-  };
 
+    function drawOutcomeChart() {
+      var myConfig = {
+        "type":"pie",
+        "title":{
+          "text":"Austin Animal Center Animal Outcomes"
+        },
+        "series":[
+          {"values":[34]},
+          {"values":[57]}
+          // {"values":[middle]},
+          // {"values":[old]}
+        ]
+      };
+      
+      zingchart.render({ 
+        id : 'pie', 
+        data : myConfig, 
+        height: 400, 
+        width: "100%" 
+      });
+    };
 
+  var typeButton = d3.select(".type");
+  var ageButton = d3.select(".ageOutcome");
 
+  // on the typeButton being clicked, do this
+  typeButton.on("click", function() {
+    // Change pie chart to animal types
+    drawTypeChart();
+  });
 
-var typeButton = d3.select(".type");
-var ageButton = d3.select(".ageOutcome");
-
-// on the typeButton being clicked, do this
-typeButton.on("click", function() {
-  // Change pie chart to animal types
+  // on the ageButton being clicked, do this
+  ageButton.on("click", function() {
+    // Change pie chart to age upon outcomes
+    drawOutcomeChart();
+  });
   drawTypeChart();
-});
-
-// on the ageButton being clicked, do this
-ageButton.on("click", function() {
-  // Change pie chart to age upon outcomes
-  drawOutcomeChart();
-});
+  });
+  }
 
 function init() {
   buildSatCharts();
   buildAnimalCharts();
   buildPieCharts();
-  drawTypeChart();
-  // drawchart();
+  // drawTypeChart();
 };
 // Initialize the dashboard
 init();
