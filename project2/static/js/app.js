@@ -479,7 +479,7 @@ d3.json(`/aacdata`).then(function(response){
           wordFrequency[currentWord] = 1;
         }
         }
-        console.log(wordFrequency)
+        // console.log(wordFrequency)
 
       // var total = dogCount + catCount + otherCount + birdCount + livestockCount;
         return wordFrequency;
@@ -492,9 +492,11 @@ d3.json(`/aacdata`).then(function(response){
 
     wordCount(dogcount)
     dogcounted = wordCount(dogcount)
-    
-    // wordCount(catcount)
-    // catcounted = wordCount(catcount)
+    console.log(dogcounted)
+
+    wordCount(catcount)
+    catcounted = wordCount(catcount)
+    console.log(catcounted)
 
     // wordCount(othercount)
     // othercounted = wordCount(othercount)
@@ -539,11 +541,11 @@ d3.json(`/aacdata`).then(function(response){
     var myConfig = {
       "type":"pie",
       "title":{
-        "text":"Animal Type"
+        "text":"Austin Animal Center Animal Types"
       },
       "series":[
-        {"values":[3016]},
-        {"values":[25]},
+        {"values":[30156]},
+        {"values":[20541]},
         // {"values":[otherCount]},
         // {"values":[birdCount]},
         // {"values":[livestockCount]}
@@ -558,11 +560,11 @@ d3.json(`/aacdata`).then(function(response){
     });
   };
 
-  function drawAgeChart() {
+  function drawOutcomeChart() {
     var myConfig = {
       "type":"pie",
       "title":{
-        "text":"Age of Outcome"
+        "text":"Austin Animal Center Animal Outcomes"
       },
       "series":[
         {"values":[34]},
@@ -581,29 +583,7 @@ d3.json(`/aacdata`).then(function(response){
   };
 
 
-// function drawChart() {
-//   var myConfig = {
-//     "type":"pie",
-//     "title":{
-//       "text":"Adoptions by Animal Type"
-//     },
-//     "series":[
-//       {"values":[59]},
-//       {"values":[55]},
-//       {"values":[30]},
-//       {"values":[28]},
-//       {"values":[15]}
-//     ]
-//   };
-   
-//   zingchart.render({ 
-//     id : 'pie', 
-//     data : myConfig, 
-//     height: 400, 
-    // width: "100%" 
 
-//   });
-// };
 
 var typeButton = d3.select(".type");
 var ageButton = d3.select(".ageOutcome");
@@ -617,7 +597,7 @@ typeButton.on("click", function() {
 // on the ageButton being clicked, do this
 ageButton.on("click", function() {
   // Change pie chart to age upon outcomes
-  drawAgeChart();
+  drawOutcomeChart();
 });
 
 function init() {
