@@ -492,16 +492,9 @@ d3.json(`/aacdata`).then(function(response){
 
     wordCount(dogcount)
     dogcounted = wordCount(dogcount)
-    function valcount() {
-      for (var key in obj) {
-        var value = obj[key];
-        return value;
-      };
-    valcount(dogcounted)
-    dogCounted =  valcount(dogcounted);
-    }
-    wordCount(catcount)
-    catcounted = wordCount(catcount)
+    
+    // wordCount(catcount)
+    // catcounted = wordCount(catcount)
 
     // wordCount(othercount)
     // othercounted = wordCount(othercount)
@@ -522,8 +515,8 @@ d3.json(`/aacdata`).then(function(response){
           "text":"Pie Chart"
         },
         "series":[
-          {"values":[dogcounted]},
-          // {"values":[catcounted]},
+          {"values":[10]},
+          {"values":[20]},
           // {"values":[otherCount]},
           // {"values":[birdCount]},
           // {"values":[livestockCount]}
