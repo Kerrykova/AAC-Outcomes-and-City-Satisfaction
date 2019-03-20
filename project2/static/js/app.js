@@ -45,7 +45,7 @@ d3.json(`/satisfactiondata`).then(function(response){
   var qofl_mapped2016 = sat2016list.map(sat2016list => sat2016list.quality_of_life);
   var qofl_mapped2017 = sat2017list.map(sat2017list => sat2017list.quality_of_life);
 
-  console.log (qofl_mapped2015)
+  // console.log (qofl_mapped2015)
 
   function wordCount(data) {
   //   // An object to hold word frequency
@@ -141,8 +141,8 @@ d3.json(`/satisfactiondata`).then(function(response){
   wordCountSat(qofl_mapped2015);
   var qofl2017 = wordCountSat(qofl_mapped2017);
 
-  console.log(animal_services_mapped2015)
-  console.log(animal_services2015)
+  // console.log(animal_services_mapped2015)
+  // console.log(animal_services2015)
   // console.log(qofl2015)
 
   // SAFETY LINE CHART
@@ -334,7 +334,7 @@ function buildAnimalCharts(animal) {
         }
         var adoption = wordFrequency.Adoption;
         var rto = wordFrequency["Return to Owner"];
-        console.log(rto)
+        // console.log(rto)
         var transfer = wordFrequency.Transfer;
         var died = wordFrequency.Died;
         var euthanasia = wordFrequency.Euthanasia;
@@ -409,7 +409,6 @@ function buildAnimalCharts(animal) {
   name: 'Bird'
   };
 
-// var animal_outcome_data = [dog, cat, livestock, bird];
   var animal_outcome_data = [dog, cat, livestock, bird];
 
   var layout = {
@@ -434,32 +433,142 @@ function buildAnimalCharts(animal) {
 });
 }
 
-function drawChart() {
-  var myConfig = {
-    "type":"pie",
-    "title":{
-      "text":"Adoptions by Animal Type"
-    },
-    "series":[
-      {"values":[59]},
-      {"values":[55]},
-      {"values":[30]},
-      {"values":[28]},
-      {"values":[15]}
-    ]
-  };
+// PIE CHART
+function buildPieCharts(animal) {
+  // @TODO: Use `d3.json` to fetch the sample data for the plots
+d3.json(`/aacdata`).then(function(response){
+    // @TODO: Build a Bubble Chart using the sample data
+  animalData = response;
+  // console.log(animalData)
+
+  var aacDog = [];
+  var aacCat = [];
+
+  animalData.forEach(element => {
+    if (element.animal_type === "Dog"){
+      aacDog.push(element)
+    }
+    if (element.animal_type === "Cat") {
+      aacCat.push(element)
+    }
+    });
+  console.log(aacDog)
+  // console.log(aacCat)
+  // });
+
+  var dogcount = aacDog.map(aacDog => aacDog.animal_type);
+  console.log(dogcount)
+
+  var catcount = aacCat.map(aacCat => aacCat.animal_type);
+  console.log(catcount)
+  
+  function wordCount(data) {
+    //   // An object to hold word frequency
+      var wordFrequency = {};
+    
+    //   // Iterate through the array
+      for (var i = 0; i < data.length; i++) {
+        var currentWord = data[i];
+        // If the word has been seen before...
+        if (currentWord in wordFrequency) {
+    //       // Add one to the counter
+          wordFrequency[currentWord] += 1;
+        }
+        else {
+          // Set the counter at 1
+          wordFrequency[currentWord] = 1;
+        }
+        }
+        console.log(wordFrequency)
+
+      // var total = dogCount + catCount + otherCount + birdCount + livestockCount;
+        return wordFrequency;
+
+    };
+
+    // var dogcount = aacDog.map(aacDog => aacDog.animal_type);
+    // console.log(dogcount)
+
+
+    wordCount(dogcount)
+    dogcounted = wordCount(dogcount)
+    function valcount() {
+      for (var key in obj) {
+        var value = obj[key];
+        return value;
+      };
+    valcount(dogcounted)
+    dogCounted =  valcount(dogcounted);
+    }
+    wordCount(catcount)
+    catcounted = wordCount(catcount)
+
+    // wordCount(othercount)
+    // othercounted = wordCount(othercount)
+
+    // wordCount(livestockcount)
+    // livestockcounted = wordCount(livestockcount)
+
+    // wordCount(birdcount)
+    // birdcounted = wordCount(birdcount)
+
+    // console.log(dogcounted)
+
+
+    // function drawChart() {
+      var myConfig = {
+        "type":"pie",
+        "title":{
+          "text":"Pie Chart"
+        },
+        "series":[
+          {"values":[dogcounted]},
+          // {"values":[catcounted]},
+          // {"values":[otherCount]},
+          // {"values":[birdCount]},
+          // {"values":[livestockCount]}
+        ]
+    };
+    zingchart.render({ 
+      id : 'pie', 
+      data : myConfig, 
+      height: 400, 
+      width: "100%" 
+    });
+    // drawChart();
+  // };
+
+
+
+
+// function drawChart() {
+//   var myConfig = {
+//     "type":"pie",
+//     "title":{
+//       "text":"Adoptions by Animal Type"
+//     },
+//     "series":[
+//       {"values":[59]},
+//       {"values":[55]},
+//       {"values":[30]},
+//       {"values":[28]},
+//       {"values":[15]}
+//     ]
+//   };
    
-  zingchart.render({ 
-    id : 'pie', 
-    data : myConfig, 
-    height: 400, 
-    width: "100%" 
+//   zingchart.render({ 
+//     id : 'pie', 
+//     data : myConfig, 
+//     height: 400, 
+    // width: "100%" 
+
   });
-}
+};
 function init() {
   buildSatCharts();
   buildAnimalCharts();
-  drawChart();
+  buildPieCharts();
+  // drawchart();
 };
 // Initialize the dashboard
 init();
