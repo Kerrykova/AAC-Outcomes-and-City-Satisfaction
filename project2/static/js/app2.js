@@ -3,18 +3,20 @@ function buildPieCharts(animal) {
 d3.json(`/aacdata`).then(function(response){
     // @TODO: Build a Bubble Chart using the sample data
   animalData = response;
-
+console.log(animalData)
   var aacDog = [];
   var aacCat = [];
 
   animalData.forEach(element => {
-  if (element.animal_type === "Dog"){
-    aacDog.push(element)
-  }
-  if (element.animal_type === "Cat") {
-    aacCat.push(element)
-  }
+    if (element.animal_type === "Dog"){
+      aacDog.push(element)
+    }
+    if (element.animal_type === "Cat") {
+      aacCat.push(element)
+    }
 
+  console.log(aacDog)
+  console.log(aacCat)
   });
   });
 }
@@ -143,3 +145,6 @@ d3.json(`/aacdata`).then(function(response){
     buildPieCharts();
     drawchart();
   };
+
+
+  init();
