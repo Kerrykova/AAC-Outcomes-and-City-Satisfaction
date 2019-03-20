@@ -508,30 +508,73 @@ d3.json(`/aacdata`).then(function(response){
     // console.log(dogcounted)
 
 
-    // function drawChart() {
-      var myConfig = {
-        "type":"pie",
-        "title":{
-          "text":"Pie Chart"
-        },
-        "series":[
-          {"values":[10]},
-          {"values":[20]},
-          // {"values":[otherCount]},
-          // {"values":[birdCount]},
-          // {"values":[livestockCount]}
-        ]
+  //   // function drawChart() {
+  //     var myConfig = {
+  //       "type":"pie",
+  //       "title":{
+  //         "text":"Pie Chart"
+  //       },
+  //       "series":[
+  //         {"values":[10]},
+  //         {"values":[20]},
+  //         // {"values":[otherCount]},
+  //         // {"values":[birdCount]},
+  //         // {"values":[livestockCount]}
+  //       ]
+  //   };
+  //   zingchart.render({ 
+  //     id : 'pie', 
+  //     data : myConfig, 
+  //     height: 400, 
+  //     width: "100%" 
+  //   });
+  //   // drawChart();
+  // // };
+
+  function drawTypeChart() {
+    var myConfig = {
+      "type":"pie",
+      "title":{
+        "text":"Animal Type"
+      },
+      "series":[
+        {"values":[15]},
+        {"values":[25]},
+        // {"values":[otherCount]},
+        // {"values":[birdCount]},
+        // {"values":[livestockCount]}
+      ]
     };
+     
     zingchart.render({ 
       id : 'pie', 
       data : myConfig, 
       height: 400, 
       width: "100%" 
     });
-    // drawChart();
-  // };
+  };
 
-
+  function drawAgeChart() {
+    var myConfig = {
+      "type":"pie",
+      "title":{
+        "text":"Age of Outcome"
+      },
+      "series":[
+        {"values":[baby]},
+        {"values":[young]},
+        {"values":[middle]},
+        {"values":[old]}
+      ]
+    };
+     
+    zingchart.render({ 
+      id : 'pie', 
+      data : myConfig, 
+      height: 400, 
+      width: "100%" 
+    });
+  };
 
 
 // function drawChart() {
@@ -557,10 +600,27 @@ d3.json(`/aacdata`).then(function(response){
 
   });
 };
+
+var typeButton = d3.select(".type");
+var ageButton = d3.select(".ageOutcome");
+
+// on the typeButton being clicked, do this
+typeButton.on("click", function() {
+  // Change pie chart to animal types
+  drawTypeChart();
+});
+
+// on the ageButton being clicked, do this
+ageButton.on("click", function() {
+  // Change pie chart to age upon outcomes
+  drawAgeChart();
+});
+
 function init() {
   buildSatCharts();
   buildAnimalCharts();
   buildPieCharts();
+  drawTypeChart();
   // drawchart();
 };
 // Initialize the dashboard
