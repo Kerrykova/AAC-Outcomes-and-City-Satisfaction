@@ -445,6 +445,12 @@ d3.json(`/aacdata`).then(function(response){
   // var aacLS = [];
   var aacBird = [];
 
+  var aacAdopted = [];
+  var aacDied = [];
+  var aacReturnedToOwner = [];
+  var aacTransferred = [];
+  // var aacOtherOutcome = [];
+
   animalData.forEach(element => {
     if (element.animal_type === "Dog"){
       aacDog.push(element)
@@ -458,6 +464,25 @@ d3.json(`/aacdata`).then(function(response){
     if (element.animal_type === "Bird") {
       aacBird.push(element)
     }
+    if (element.outcome_type === "Adoption") {
+      aacAdopted.push(element)
+    }
+    if (element.outcome_type === "Died") {
+      aacDied.push(element)
+    }
+    if (element.outcome_type === "Euthanasia") {
+      aacDied.push(element)
+    }
+    if (element.outcome_type === "Relocate") {
+      aacTransferred.push(element)
+    }
+    if (element.outcome_type === "Transfer") {
+      aacTransferred.push(element)
+    }    
+    if (element.outcome_type === "Return to Owner") {
+      aacReturnedToOwner.push(element)
+    }
+
 
     });
 
@@ -468,6 +493,11 @@ d3.json(`/aacdata`).then(function(response){
   var birdcount = aacBird.map(aacBird => aacBird.animal_type);
   // var lscount = aacLS.map(aacLS => aacLS.animal_type);
   var othercount = aacOther.map(aacOther => aacOther.animal_type);
+
+  var adoptedcount = aacAdopted.map(aacAdopted => aacAdopted.outcome_type);
+  var diedcount = aacDied.map(aacDied => aacDied.outcome_type);
+  var rtocount = aacReturnedToOwner.map(aacReturnedToOwner => aacReturnedToOwner.outcome_type);
+  var transfercount = aacTransferred.map(aacTransferred => aacTransferred.outcome_type);
 
   function wordCount(data) {
     //   // An object to hold word frequency
@@ -488,7 +518,7 @@ d3.json(`/aacdata`).then(function(response){
         return wordFrequency.Dog;
     };
     wordCount(dogcount)
-    dogcounted = wordCount(dogcount)
+    dogcounted = wordCount(dogcount);
 
   function catwordCount(data) {
     //   // An object to hold word frequency
@@ -509,7 +539,7 @@ d3.json(`/aacdata`).then(function(response){
         return wordFrequency.Cat;
     };
     catwordCount(catcount)
-    catcounted = catwordCount(catcount)
+    catcounted = catwordCount(catcount);
 
     function birdwordCount(data) {
       //   // An object to hold word frequency
@@ -531,7 +561,7 @@ d3.json(`/aacdata`).then(function(response){
       };
 
     birdwordCount(birdcount)
-    birdcounted = birdwordCount(birdcount)
+    birdcounted = birdwordCount(birdcount);
 
     function otherwordCount(data) {
       //   // An object to hold word frequency
@@ -552,19 +582,165 @@ d3.json(`/aacdata`).then(function(response){
           return wordFrequency.Other;
       };
     otherwordCount(othercount)
-    othercounted = otherwordCount(othercount)
+    othercounted = otherwordCount(othercount);
+
+
+
+
+
+
+
+    // Count the number of each outcome type
+    function adoptedwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency.Adoption;
+      };
+    adoptedwordCount(adoptedcount)
+    adopted = adoptedwordCount(adoptedcount);
+
+    function diedwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency.Died;
+      };
+    diedwordCount(diedcount)
+    died = diedwordCount(diedcount);
+
+    function rtowordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency["Return to Owner"];
+      };
+    rtowordCount(rtocount)
+    returnToOwner= rtowordCount(rtocount);
+
+    function transferwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency.Transfer;
+      };
+    transferwordCount(transfercount)
+    transfer = transferwordCount(transfercount);
+
+    // function otherwordCount(data) {
+    //   //   // An object to hold word frequency
+    //     var wordFrequency = {};
+    //   //   // Iterate through the array
+    //     for (var i = 0; i < data.length; i++) {
+    //       var currentWord = data[i];
+    //       // If the word has been seen before...
+    //       if (currentWord in wordFrequency) {
+    //   //       // Add one to the counter
+    //         wordFrequency[currentWord] += 1;
+    //       }
+    //       else {
+    //         // Set the counter at 1
+    //         wordFrequency[currentWord] = 1;
+    //       }
+    //       }
+    //       return wordFrequency.OtherOutcome;
+    //   };
+    // otherwordCount(othercount)
+    // other = otherwordCount(othercount);
+
+
+
+
+
 
     function drawTypeChart() {
       var myConfig = {
         "type":"pie",
         "title":{
-          "text":"Austin Animal Center Animal Types"
+          "text":"Animal Types"
         },
+        "plot":{
+              "animation":{
+                 "on-legend-toggle": true, //set to true to show animation and false to turn off
+                 "effect": 5,
+                 "method": 1,
+                 "sequence": 1,
+                 "speed": 1
+              },
+              "tooltip":{
+                  "text":"%t: %v",
+                  "font-color":"black",
+                  "font-family":"Helvetica",
+                  "text-alpha":1,
+                  "background-color":"white",
+                  "alpha":0.8,
+                  "border-width":1,
+                  "border-color":"#fcfcfc",
+                  "border-radius":"10px",
+                  "padding":"10%",
+                  "placement":"node:center"
+        }},      
         "series":[
-          {"values":[dogcounted]},
-          {"values":[catcounted]},
-          {"values":[birdcounted]},
-          {"values":[othercounted]},
+          {"values":[dogcounted],
+           "background-color":"#e52222",
+           "text": "Dog"},
+          {"values":[catcounted],
+           "background-color":"#e05050",
+           "text": "Cat"},
+          {"values":[birdcounted],
+           "background-color":"#ea8383",
+           "text": "Bird"},
+          {"values":[othercounted],
+           "background-color":"#efacac",
+           "text": "Other"},
           // {"values":[lscounted]}
         ]
       };
@@ -581,13 +757,42 @@ d3.json(`/aacdata`).then(function(response){
       var myConfig = {
         "type":"pie",
         "title":{
-          "text":"Austin Animal Center Animal Outcomes"
+          "text":"Animal Outcomes"
         },
+        "plot":{
+                "animation":{
+                  "on-legend-toggle": true, //set to true to show animation and false to turn off
+                  "effect": 5,
+                  "method": 1,
+                  "sequence": 1,
+                  "speed": 1
+                },
+                "tooltip":{
+                    "text":"%t: %v",
+                    "font-color":"black",
+                    "font-family":"Helvetica",
+                    "text-alpha":1,
+                    "background-color":"white",
+                    "alpha":0.8,
+                    "border-width":1,
+                    "border-color":"#fcfcfc",
+                    "border-radius":"10px",
+                    "padding":"10%",
+                    "placement":"node:center"
+          }},   
         "series":[
-          {"values":[34]},
-          {"values":[57]}
-          // {"values":[middle]},
-          // {"values":[old]}
+          {"values":[adopted],
+          "background-color":"#e52222",
+          "text": "Adopted"},
+          {"values":[died],
+          "background-color":"#e05050",
+          "text": "Died/Euthanized"},
+          {"values":[returnToOwner],
+          "background-color":"#ea8383",
+          "text": "Returned to Owner"},
+          {"values":[transfer],
+          "background-color":"#efacac",
+          "text": "Transferred"}
         ]
       };
       
