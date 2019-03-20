@@ -631,7 +631,26 @@ d3.json(`/aacdata`).then(function(response){
           return wordFrequency.Died;
       };
     diedwordCount(diedcount)
-    died = diedwordCount(diedcount);
+    function euthanizedwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+          }
+          return wordFrequency.Euthanasia;
+      };
+    euthanizedwordCount(diedcount)
+    died = diedwordCount(diedcount) + euthanizedwordCount(diedcount);
 
     function rtowordCount(data) {
       //   // An object to hold word frequency
