@@ -531,6 +531,10 @@ d3.json(`/aacdata`).then(function(response){
   //   // drawChart();
   // // };
 
+});
+};
+
+
   function drawTypeChart() {
     var myConfig = {
       "type":"pie",
@@ -538,7 +542,7 @@ d3.json(`/aacdata`).then(function(response){
         "text":"Animal Type"
       },
       "series":[
-        {"values":[15]},
+        {"values":[3016]},
         {"values":[25]},
         // {"values":[otherCount]},
         // {"values":[birdCount]},
@@ -561,10 +565,10 @@ d3.json(`/aacdata`).then(function(response){
         "text":"Age of Outcome"
       },
       "series":[
-        {"values":[baby]},
-        {"values":[young]},
-        {"values":[middle]},
-        {"values":[old]}
+        {"values":[34]},
+        {"values":[57]}
+        // {"values":[middle]},
+        // {"values":[old]}
       ]
     };
      
@@ -598,8 +602,8 @@ d3.json(`/aacdata`).then(function(response){
 //     height: 400, 
     // width: "100%" 
 
-  });
-};
+//   });
+// };
 
 var typeButton = d3.select(".type");
 var ageButton = d3.select(".ageOutcome");
