@@ -708,6 +708,10 @@ d3.json(`/aacdata`).then(function(response){
           "text":"Animal Types"
         },
         "plot":{
+              "value-box":{
+                "text": '%t',
+                "placement":"out",
+                "font-size":10,},
               "animation":{
                  "on-legend-toggle": true, //set to true to show animation and false to turn off
                  "effect": 5,
@@ -716,7 +720,7 @@ d3.json(`/aacdata`).then(function(response){
                  "speed": 1
               },
               "tooltip":{
-                  "text":"%t: %v",
+                  "text":"%t: %v (%npv%)",
                   "font-color":"black",
                   "font-family":"Helvetica",
                   "text-alpha":1,
@@ -760,6 +764,10 @@ d3.json(`/aacdata`).then(function(response){
           "text":"Animal Outcomes"
         },
         "plot":{
+                "value-box":{
+                    "text": '%t',
+                    "placement":"out",
+                    "font-size":10,},
                 "animation":{
                   "on-legend-toggle": true, //set to true to show animation and false to turn off
                   "effect": 5,
@@ -768,7 +776,7 @@ d3.json(`/aacdata`).then(function(response){
                   "speed": 1
                 },
                 "tooltip":{
-                    "text":"%t: %v",
+                    "text":"%t: %v (%npv%)",
                     "font-color":"black",
                     "font-family":"Helvetica",
                     "text-alpha":1,
@@ -786,10 +794,10 @@ d3.json(`/aacdata`).then(function(response){
           "text": "Adopted"},
           {"values":[died],
           "background-color":"#e05050",
-          "text": "Died/Euthanized"},
+          "text": "Died"},
           {"values":[returnToOwner],
           "background-color":"#ea8383",
-          "text": "Returned to Owner"},
+          "text": "RTO"},
           {"values":[transfer],
           "background-color":"#efacac",
           "text": "Transferred"}
