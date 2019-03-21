@@ -736,7 +736,7 @@ d3.json(`/aacdata`).then(function(response){
           "text": "Died"},
           {"values":[returnToOwner],
           "background-color":"#ea8383",
-          "text": "Returned To Owner"},
+          "text": "Returned"},
           {"values":[transfer],
           "background-color":"#efacac",
           "text": "Transferred"}
