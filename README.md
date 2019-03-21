@@ -9,21 +9,16 @@ Two datasets were found from the austintexas.gov website containing data detaili
 Multiple visualizations will be made using Tableau and Python, shedding light on comparisons between resident's city views and animal center outcomes. 
 
    Animal Center Outcomes Data:
-    Bar graphs will be formed to view the overall outcomes of animals by type, age, and breed. 
-    A bar/pie chart of different type of animals. (whichever seems more informative)
-    A bar/pie chart of the number of animals by breed. (whichever seems more informative)
-    Charts showing changes of outcomes by year. These can be broken into age, type, and breed.
+    A pie chart of different type of animals. 
+    A pie chart of the number of animals by outcome type. 
+    A line chart showing changes of outcomes by year by animal type.
+ 
 
    Satisfaction Survey Data:
-    An interactive plot asking for the user to enter an Austin zip codes which returns data by zip code of the different survey responses (quality of life, safety, parks and rec, etc)
-        Add on a layer that changes color/transparency based on a certain demographic by that zip code. 
-                Do this using Leaflet (JS) and create a Flask app from this. 
-
-   Outcomes and Satisfaction Data:
-    Double line chart of count of animal center (single type) outcomes over the three year period and the percent of total that are satisfied over the same period.
-    Double line chart of count of animal center (single type) outcomes over the three year period and the percent of total that are satisfied with animal services over the same period.
-
-    
+    A line chart showing changing in safety and satisfaction levels in Austin by year. 
+    An interactive plot by Austin zip codes which returns data of the different survey responses (quality of life, safety, parks and rec, etc)
+        Add on a layer that changes color/transparency based on a certain demographic by that zip code (we chose day safety). 
+                Do this using Tableau.
 
 Data sources: 
 
@@ -46,3 +41,5 @@ Data destination:
 MySQL database
 Database: etlproject_db
 Tables: aac_outcomes, city_satisfaction
+
+Used ZingChart, Plotly and Tableau for visualization graphs

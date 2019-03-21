@@ -386,7 +386,7 @@ function buildAnimalCharts(animal) {
   },
   yaxis: {
     title: 'Percent Adopted and Returned to Owner',
-    range: [0, 100],
+    range: [20, 100],
   }
   };
 
@@ -736,7 +736,7 @@ d3.json(`/aacdata`).then(function(response){
           "text": "Died"},
           {"values":[returnToOwner],
           "background-color":"#ea8383",
-          "text": "RTO"},
+          "text": "Returned To Owner"},
           {"values":[transfer],
           "background-color":"#efacac",
           "text": "Transferred"}
@@ -773,6 +773,7 @@ function init() {
   buildSatCharts();
   buildAnimalCharts();
   buildPieCharts();
+  // drawTypeChart();
 };
 // Initialize the dashboard
 init();
