@@ -3,11 +3,8 @@ var satisfactionData;
 var animalData;
 
 function buildSatCharts(satisfaction) {
-// @TODO: Use `d3.json` to fetch the sample data for the plots
 d3.json(`/satisfactiondata`).then(function(response){
-  // @TODO: Build a Bubble Chart using the sample data
   satisfactionData = response;
-  // console.log(satisfactionData);
   var sat2015list = [];
   var sat2016list = [];
   var sat2017list = [];
@@ -22,7 +19,6 @@ d3.json(`/satisfactiondata`).then(function(response){
     if (element.year === 2017) {
       sat2017list.push(element)
     }
-
   });
 
   var safety_day_mapped2015 = sat2015list.map(sat2015list => sat2015list.safety_day);
@@ -44,8 +40,6 @@ d3.json(`/satisfactiondata`).then(function(response){
   var qofl_mapped2015 = sat2015list.map(sat2015list => sat2015list.quality_of_life);
   var qofl_mapped2016 = sat2016list.map(sat2016list => sat2016list.quality_of_life);
   var qofl_mapped2017 = sat2017list.map(sat2017list => sat2017list.quality_of_life);
-
-  // console.log (qofl_mapped2015)
 
   function wordCount(data) {
   //   // An object to hold word frequency
@@ -141,10 +135,6 @@ d3.json(`/satisfactiondata`).then(function(response){
   wordCountSat(qofl_mapped2015);
   var qofl2017 = wordCountSat(qofl_mapped2017);
 
-  // console.log(animal_services_mapped2015)
-  // console.log(animal_services2015)
-  // console.log(qofl2015)
-
   // SAFETY LINE CHART
 
   var safety_day_line = {
@@ -195,13 +185,10 @@ d3.json(`/satisfactiondata`).then(function(response){
     xaxis: {
       title: 'Year',
       nticks: (3)
-      // showgrid: false,
-      // zeroline: false
     },
     yaxis: {
       title: 'Percent Satisfied',
       range: [40, 100],
-      // showline: false
     }
   };
   var satgraph = document.getElementById('sample-safetydata')
@@ -211,11 +198,8 @@ d3.json(`/satisfactiondata`).then(function(response){
 }
   
 function buildAnimalCharts(animal) {
-    // @TODO: Use `d3.json` to fetch the sample data for the plots
   d3.json(`/aacdata`).then(function(response){
-      // @TODO: Build a Bubble Chart using the sample data
     animalData = response;
-    // console.log(animalData);
 
     var aac2015list = [];
     var aac2016list = [];
@@ -232,23 +216,16 @@ function buildAnimalCharts(animal) {
       aac2017list.push(element)
     }
     });
-  // console.log(aac2015list)
-  // console.log(aac2016list)
-  // console.log(aac2017list)
 
     var aac2015dog = [];
     var aac2015cat = [];
     var aac2015bird = [];
-    var aac2015livestock = [];
     var aac2016dog = [];
     var aac2016cat = [];  
     var aac2016bird = [];
-    var aac2016livestock = [];
     var aac2017dog = [];
     var aac2017cat = [];
     var aac2017bird = [];
-    var aac2017livestock = [];
-
 
     aac2015list.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -260,12 +237,7 @@ function buildAnimalCharts(animal) {
     if (element.animal_type === "Bird") {
       aac2015bird.push(element)
     }
-    if (element.animal_type === "Livestock") {
-      aac2015livestock.push(element)
-    }
     });
-    console.log(aac2015bird);
-    // console.log(aac2015cat);
 
     aac2016list.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -277,12 +249,7 @@ function buildAnimalCharts(animal) {
     if (element.animal_type === "Bird") {
       aac2016bird.push(element)
     }
-    if (element.animal_type === "Livestock") {
-      aac2016livestock.push(element)
-    }
     });
-      // console.log(aac2016dog);
-      // console.log(aac2016cat);
 
     aac2017list.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -294,27 +261,18 @@ function buildAnimalCharts(animal) {
     if (element.animal_type === "Bird") {
       aac2017bird.push(element)
     }
-    if (element.animal_type === "Livestock") {
-      aac2017livestock.push(element)
-    }
     });
-    // console.log(aac2017dog);
-    // console.log(aac2017cat);
 
     var dog2015 = aac2015dog.map(aac2015dog => aac2015dog.outcome_type);
     var cat2015 = aac2015cat.map(aac2015cat => aac2015cat.outcome_type);
     var bird2015 = aac2015bird.map(aac2015bird => aac2015bird.outcome_type);
-    var livestock2015 = aac2015livestock.map(aac2015livestock => aac2015bird.livestock);
     var dog2016 = aac2016dog.map(aac2016dog => aac2016dog.outcome_type);
     var cat2016 = aac2016cat.map(aac2016cat => aac2016cat.outcome_type);
     var bird2016 = aac2016bird.map(aac2016bird => aac2016bird.outcome_type);
-    var livestock2016 = aac2016livestock.map(aac2016livestock => aac2016livestock.outcome_type);
     var dog2017 = aac2017dog.map(aac2017dog => aac2017dog.outcome_type);
     var cat2017 = aac2017cat.map(aac2017cat => aac2017cat.outcome_type);
     var bird2017 = aac2017bird.map(aac2017bird => aac2017bird.outcome_type);
-    var livestock2017 = aac2017livestock.map(aac2017livestock => aac2017livestock.outcome_type);
 
-    // console.log(dog2015);
 
     function wordCount(data) {
       //   // An object to hold word frequency
@@ -334,12 +292,10 @@ function buildAnimalCharts(animal) {
         }
         var adoption = wordFrequency.Adoption;
         var rto = wordFrequency["Return to Owner"];
-        // console.log(rto)
         var transfer = wordFrequency.Transfer;
         var died = wordFrequency.Died;
         var euthanasia = wordFrequency.Euthanasia;
         var missing = wordFrequency.Missing;
-
         var total = adoption + rto + transfer + died + euthanasia + missing;
         var adoptionrto = adoption + rto;
         var adoptionrtopct = adoptionrto / total * 100;
@@ -359,21 +315,38 @@ function buildAnimalCharts(animal) {
     wordCount(cat2017);
     var cat_2017 = wordCount(cat2017);
 
-    wordCount(bird2015);
-    var bird_2015 = wordCount(bird2015);
-    wordCount(bird2016);
-    var bird_2016 = wordCount(bird2016);
-    wordCount(bird2017);
-    var bird_2017 = wordCount(bird2017);
-
-    wordCount(livestock2015);
-    var livestock_2015 = wordCount(livestock2015);
-    wordCount(livestock2016);
-    var livestock_2016 = wordCount(livestock2016);
-    wordCount(livestock2017);
-    var livestock_2017 = wordCount(livestock2017);
-
-    console.log(dog_2015)
+    function birdwordCount(data) {
+      //   // An object to hold word frequency
+        var wordFrequency = {};
+      //   // Iterate through the array
+        for (var i = 0; i < data.length; i++) {
+          var currentWord = data[i];
+          // If the word has been seen before...
+          if (currentWord in wordFrequency) {
+      //       // Add one to the counter
+            wordFrequency[currentWord] += 1;
+          }
+          else {
+            // Set the counter at 1
+            wordFrequency[currentWord] = 1;
+          }
+        }
+        var adoption = wordFrequency.Adoption;
+        var rto = wordFrequency["Return to Owner"];
+        var transfer = wordFrequency.Transfer;
+        var died = wordFrequency.Died;
+        var euthanasia = wordFrequency.Euthanasia;
+        var total = adoption + rto + transfer + died + euthanasia;
+        var adoptionrto = adoption + rto;
+        var adoptionrtopct = adoptionrto / total * 100;
+        return adoptionrtopct;
+    }
+    birdwordCount(bird2015);
+    var bird_2015 = birdwordCount(bird2015);
+    birdwordCount(bird2016);
+    var bird_2016 = birdwordCount(bird2016);
+    birdwordCount(bird2017);
+    var bird_2017 = birdwordCount(bird2017);
     
 // ANIMAL OUTCOME LINE CHART
 
@@ -393,14 +366,6 @@ function buildAnimalCharts(animal) {
   name: 'Cat'
   };
 
-  var livestock = {
-  x: [2015, 2016, 2017],
-  y: [livestock_2015, livestock_2016, livestock_2017],
-  type: 'scatter',
-  mode: 'lines+markers',
-  name: 'Livestock'
-  };
-
   var bird = {
   x: [2015, 2016, 2017],
   y: [bird_2015, bird_2016, bird_2017],
@@ -409,7 +374,7 @@ function buildAnimalCharts(animal) {
   name: 'Bird'
   };
 
-  var animal_outcome_data = [dog, cat, livestock, bird];
+  var animal_outcome_data = [dog, cat, bird];
 
   var layout = {
   width: 550,
@@ -418,14 +383,10 @@ function buildAnimalCharts(animal) {
   xaxis: {
     title: 'Year',
     nticks: (3)
-
-    // showgrid: false,
-    // zeroline: false
   },
   yaxis: {
     title: 'Percent Adopted and Returned to Owner',
     range: [0, 100],
-    // showline: false
   }
   };
 
@@ -435,21 +396,18 @@ function buildAnimalCharts(animal) {
 
 // PIE CHART
 function buildPieCharts(animal) {
-  // @TODO: Use `d3.json` to fetch the sample data for the plots
 d3.json(`/aacdata`).then(function(response){
   animalData = response;
 
   var aacDog = [];
   var aacCat = [];
   var aacOther = [];
-  // var aacLS = [];
   var aacBird = [];
 
   var aacAdopted = [];
   var aacDied = [];
   var aacReturnedToOwner = [];
   var aacTransferred = [];
-  // var aacOtherOutcome = [];
 
   animalData.forEach(element => {
     if (element.animal_type === "Dog"){
@@ -482,16 +440,11 @@ d3.json(`/aacdata`).then(function(response){
     if (element.outcome_type === "Return to Owner") {
       aacReturnedToOwner.push(element)
     }
-
-
     });
-
-  // });
 
   var dogcount = aacDog.map(aacDog => aacDog.animal_type);
   var catcount = aacCat.map(aacCat => aacCat.animal_type);
   var birdcount = aacBird.map(aacBird => aacBird.animal_type);
-  // var lscount = aacLS.map(aacLS => aacLS.animal_type);
   var othercount = aacOther.map(aacOther => aacOther.animal_type);
 
   var adoptedcount = aacAdopted.map(aacAdopted => aacAdopted.outcome_type);
@@ -583,12 +536,6 @@ d3.json(`/aacdata`).then(function(response){
       };
     otherwordCount(othercount)
     othercounted = otherwordCount(othercount);
-
-
-
-
-
-
 
     // Count the number of each outcome type
     function adoptedwordCount(data) {
@@ -694,32 +641,6 @@ d3.json(`/aacdata`).then(function(response){
     transferwordCount(transfercount)
     transfer = transferwordCount(transfercount);
 
-    // function otherwordCount(data) {
-    //   //   // An object to hold word frequency
-    //     var wordFrequency = {};
-    //   //   // Iterate through the array
-    //     for (var i = 0; i < data.length; i++) {
-    //       var currentWord = data[i];
-    //       // If the word has been seen before...
-    //       if (currentWord in wordFrequency) {
-    //   //       // Add one to the counter
-    //         wordFrequency[currentWord] += 1;
-    //       }
-    //       else {
-    //         // Set the counter at 1
-    //         wordFrequency[currentWord] = 1;
-    //       }
-    //       }
-    //       return wordFrequency.OtherOutcome;
-    //   };
-    // otherwordCount(othercount)
-    // other = otherwordCount(othercount);
-
-
-
-
-
-
     function drawTypeChart() {
       var myConfig = {
         "type":"pie",
@@ -764,7 +685,6 @@ d3.json(`/aacdata`).then(function(response){
           {"values":[othercounted],
            "background-color":"#efacac",
            "text": "Other"},
-          // {"values":[lscounted]}
         ]
       };
       
@@ -853,7 +773,6 @@ function init() {
   buildSatCharts();
   buildAnimalCharts();
   buildPieCharts();
-  // drawTypeChart();
 };
 // Initialize the dashboard
 init();
