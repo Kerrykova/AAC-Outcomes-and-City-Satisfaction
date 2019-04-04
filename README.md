@@ -10,15 +10,19 @@ Multiple visualizations will be made using Tableau and Python, shedding light on
 
    Animal Center Outcomes Data:
     A pie chart of different type of animals. 
+    <img width="383" alt="Animal Type" src="https://user-images.githubusercontent.com/42496709/55523031-1073b600-564d-11e9-8942-fb59a744fd9f.png">
     A pie chart of the number of animals by outcome type. 
+    <img width="367" alt="Animal Outcomes" src="https://user-images.githubusercontent.com/42496709/55523030-0fdb1f80-564d-11e9-96a9-a2e799a84ca8.png">
     A line chart showing changes of outcomes by year by animal type.
- 
+ <img width="564" alt="Adoption Rates" src="https://user-images.githubusercontent.com/42496709/55523038-14073d00-564d-11e9-8b31-5b547a116920.png">
 
    Satisfaction Survey Data:
     A line chart showing changing in safety and satisfaction levels in Austin by year. 
+    <img width="579" alt="Satisfaction Rates" src="https://user-images.githubusercontent.com/42496709/55523033-11a4e300-564d-11e9-9cc4-dd4f3c902f3b.png">
     An interactive plot by Austin zip codes which returns data of the different survey responses (quality of life, safety, parks and rec, etc)
         Add on a layer that changes color/transparency based on a certain demographic by that zip code (we chose day safety). 
                 Do this using Tableau.
+<img width="729" alt="Satisfaction Map" src="https://user-images.githubusercontent.com/42496709/55523034-136ea680-564d-11e9-9660-5032172e8041.png">
 
 Data sources: 
 
