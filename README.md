@@ -6,7 +6,7 @@ Github Repository: https://github.com/Kerrykova/Project-2
 
 Two datasets were found from the austintexas.gov website containing data detailing the animal center outcomes (2015-2017) and city satisfaction survey (2015-2017) responses of the city of Austin. These datasets will be compared to see if any correlations exist between various Austin resident responses regarding their satisfaction of different factors of the city and the outcomes of animals in shelters. Specifically, we will be looking at the responses to questions regarding resident's views on parks, safety, and overall satisfaction as well as demographics and comparing these by zip codes.
 
-Multiple visualizations will be made using Tableau and Python, shedding light on comparisons between resident's city views and animal center outcomes. 
+Multiple visualizations will be made using Tableau, Python and JavaScript, shedding light on comparisons between resident's city views and animal center outcomes. 
 
 Animal Center Outcomes Data:
 * A pie chart of different type of animals. 
